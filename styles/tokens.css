@@ -42,14 +42,15 @@
 
   /* ---------- TIER 2 · SEMANTIC · COLOR ---------- */
 
-  /* Primary — Terracotta · OKLCH hue 50.7 (derivado de #E9792B) */
-  --color-primary-50:  oklch(97% 0.02 50.7);
-  --color-primary-100: oklch(93% 0.05 50.7);
-  --color-primary-300: oklch(75% 0.14 50.7);
-  --color-primary-500: #e9792b;
-  --color-primary-700: oklch(40% 0.18 50.7);
-  --color-primary-800: oklch(30% 0.14 50.7);
-  --color-primary-900: oklch(20% 0.08 50.7);
+  /* Primary — Terracotta pastel · OKLCH hue 50.7
+     300/500 mantidos; demais re-suavizados para um ramp pastel coeso. */
+  --color-primary-50:  oklch(98% 0.012 50.7);
+  --color-primary-100: oklch(95% 0.035 50.7);
+  --color-primary-300: oklch(75% 0.14 50.7);   /* mantido */
+  --color-primary-500: #e9792b;                /* mantido — brand */
+  --color-primary-700: oklch(58% 0.13 50.7);   /* hover suave */
+  --color-primary-800: oklch(48% 0.10 50.7);   /* deep suave */
+  --color-primary-900: oklch(36% 0.07 50.7);   /* deepest suave */
 
   /* Neutral — Paper warm */
   --color-paper:        #f5f1e8;  /* surface base */
@@ -102,10 +103,21 @@
   --radius-full: 9999px;
 
   /* ---------- TIER 2 · SHADOW ---------- */
-  /* Philosophy: ZERO. Profundidade vem de alternância de surfaces.
-     Shadow só pra focus ring (acento + surface duplo). */
+  /* Philosophy: quase-zero. Shadows só em flutuantes (selected pill,
+     popover, action bar). Usa o ink hue, nunca rgba(0,0,0,X). */
   --shadow-none: none;
+  --shadow-pill:    0 1px 2px oklch(20% 0.04 50.7 / 0.05),
+                    0 4px 14px -8px oklch(20% 0.04 50.7 / 0.10);
+  --shadow-popover: 0 1px 2px oklch(20% 0.04 50.7 / 0.06),
+                    0 12px 32px -16px oklch(20% 0.04 50.7 / 0.14);
   --ring-focus:  0 0 0 2px var(--surface-bg), 0 0 0 4px var(--color-primary-500);
+
+  /* ---------- TIER 2 · PATTERN ---------- */
+  /* Dotted paper — pontos sutis a cada 22px, opacidade ~14% */
+  --pattern-dot:    var(--color-muted-soft);
+  --pattern-dot-bg:
+    radial-gradient(circle at 1px 1px, var(--pattern-dot) 1px, transparent 0);
+  --pattern-dot-size: 22px 22px;
 
   /* ---------- TIER 2 · MOTION ---------- */
   --duration-instant: 100ms;

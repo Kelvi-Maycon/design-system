@@ -98,7 +98,7 @@
   color: var(--text-primary);
 }
 
-/* H1 — 52px / Garamond Book Cond */
+/* H1 — 52px / Garamond Book CONDENSED (per brand request) */
 .t-h1 {
   font-family: var(--font-heading);
   font-weight: 400;
@@ -108,9 +108,9 @@
   color: var(--text-primary);
 }
 
-/* H2 — 33px / Garamond Book Cond */
+/* H2 — 33px / Garamond Book Narrow */
 .t-h2 {
-  font-family: var(--font-heading);
+  font-family: var(--font-subhead);
   font-weight: 400;
   font-size: var(--raw-text-33);
   line-height: 1.15;
@@ -118,10 +118,10 @@
   color: var(--text-primary);
 }
 
-/* H3 — 26px / Garamond Bold Narrow */
+/* H3 — 26px / Garamond Book Narrow (não-bold, mais elegante) */
 .t-h3 {
   font-family: var(--font-subhead);
-  font-weight: 700;
+  font-weight: 400;
   font-size: var(--raw-text-26);
   line-height: 1.2;
   letter-spacing: -0.005em;

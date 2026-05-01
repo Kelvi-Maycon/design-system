@@ -1,0 +1,183 @@
+/* ============================================================
+   Paper Editorial · Colors + Type tokens (consolidated)
+   This is a single-file consolidation of styles/tokens.css +
+   styles/typography.css for tools/skills that expect one file.
+   For the canonical multi-file system, prefer styles/index.css.
+   ============================================================ */
+
+/* ---------- Garamond local faces ---------- */
+@font-face { font-family: "Garamond Cond"; src: url("./fonts/itc-garamond/ITCGaramondStd-LtCond.ttf") format("truetype");      font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: "Garamond Cond"; src: url("./fonts/itc-garamond/ITCGaramondStd-LtCondIta.ttf") format("truetype");   font-weight: 300; font-style: italic; font-display: swap; }
+@font-face { font-family: "Garamond Cond"; src: url("./fonts/itc-garamond/ITCGaramondStd-BkCond.ttf") format("truetype");      font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Garamond Cond"; src: url("./fonts/itc-garamond/ITCGaramondStd-BkCondIta.ttf") format("truetype");   font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "Garamond Cond"; src: url("./fonts/itc-garamond/ITCGaramondStd-BdCond.ttf") format("truetype");      font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Garamond Cond"; src: url("./fonts/itc-garamond/ITCGaramondStd-BdCondIta.ttf") format("truetype");   font-weight: 700; font-style: italic; font-display: swap; }
+@font-face { font-family: "Garamond Narrow"; src: url("./fonts/itc-garamond/ITCGaramondStd-LtNarrow.ttf") format("truetype");    font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: "Garamond Narrow"; src: url("./fonts/itc-garamond/ITCGaramondStd-LtNarrowIta.ttf") format("truetype"); font-weight: 300; font-style: italic; font-display: swap; }
+@font-face { font-family: "Garamond Narrow"; src: url("./fonts/itc-garamond/ITCGaramondStd-BkNarrow.ttf") format("truetype");    font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Garamond Narrow"; src: url("./fonts/itc-garamond/ITCGaramondStd-BkNarrowIta.ttf") format("truetype"); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "Garamond Narrow"; src: url("./fonts/itc-garamond/ITCGaramondStd-BdNarrow.ttf") format("truetype");    font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Garamond Narrow"; src: url("./fonts/itc-garamond/ITCGaramondStd-BdNarrowIta.ttf") format("truetype"); font-weight: 700; font-style: italic; font-display: swap; }
+
+:root {
+  /* Type families */
+  --font-display: "Garamond Cond", Georgia, serif;
+  --font-heading: "Garamond Cond", Georgia, serif;
+  --font-subhead: "Garamond Narrow", Georgia, serif;
+  --font-body:    "Instrument Sans", system-ui, -apple-system, sans-serif;
+  --font-mono:    "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Type scale (major third 1.25, base 17px) */
+  --text-12: 0.75rem;
+  --text-14: 0.875rem;
+  --text-17: 1.0625rem;
+  --text-21: 1.3125rem;
+  --text-26: 1.625rem;
+  --text-33: 2.0625rem;
+  --text-52: 3.25rem;
+  --text-78: 4.875rem;
+
+  /* Primary — Terracotta */
+  --color-primary-50:  oklch(97% 0.02 50.7);
+  --color-primary-100: oklch(93% 0.05 50.7);
+  --color-primary-300: oklch(75% 0.14 50.7);
+  --color-primary-500: #e9792b;   /* brand */
+  --color-primary-700: oklch(40% 0.18 50.7);
+  --color-primary-800: oklch(30% 0.14 50.7);
+  --color-primary-900: oklch(20% 0.08 50.7);
+
+  /* Neutral — Paper warm */
+  --color-card:         #fbf8f0;
+  --color-paper:        #f5f1e8;
+  --color-paper-soft:   #efeade;
+  --color-paper-tag:    #e7e1d1;
+  --color-divider:      #d8d2c0;
+  --color-divider-2:    #c7c0ac;
+  --color-muted-soft:   #b5af9f;
+  --color-muted:        #8b857a;
+  --color-ink-3:        #4a463e;
+  --color-ink-2:        #2b2822;
+  --color-ink:          #1a1814;
+
+  /* Sage — positivo */
+  --color-sage:         #6f7a5c;
+  --color-sage-soft:    #dde0cc;
+
+  /* Status */
+  --color-success:      var(--color-sage);
+  --color-success-soft: var(--color-sage-soft);
+  --color-warning:      oklch(70% 0.16 75);
+  --color-error:        oklch(52% 0.18 28);
+  --color-info:         oklch(55% 0.10 240);
+
+  /* Surfaces semantic */
+  --surface-bg:    var(--color-paper);
+  --surface-alt:   var(--color-paper-soft);
+  --surface-card:  var(--color-card);
+  --surface-tag:   var(--color-paper-tag);
+
+  /* Text semantic */
+  --text-primary:    var(--color-ink);
+  --text-secondary:  var(--color-ink-3);
+  --text-muted:      var(--color-muted);
+  --text-on-primary: var(--color-card);
+  --text-accent:     var(--color-primary-500);
+
+  /* Borders semantic */
+  --border-subtle: var(--color-divider);
+  --border-strong: var(--color-divider-2);
+
+  /* Focus ring (only shadow allowed) */
+  --shadow-none: none;
+  --ring-focus:  0 0 0 2px var(--surface-bg), 0 0 0 4px var(--color-primary-500);
+
+  /* Headings as semantic vars */
+  --h-display-size:  var(--text-78);
+  --h-display-lh:    0.95;
+  --h-display-trk:   -0.025em;
+  --h1-size: var(--text-52); --h1-lh: 1;    --h1-trk: -0.02em;
+  --h2-size: var(--text-33); --h2-lh: 1.15; --h2-trk: -0.015em;
+  --h3-size: var(--text-26); --h3-lh: 1.2;  --h3-trk: -0.005em;
+  --body-size: var(--text-17); --body-lh: 1.55;
+  --small-size: var(--text-14); --small-lh: 1.5;
+  --micro-size: var(--text-12); --micro-trk: 0.16em;
+}
+
+/* ---------- Semantic element mappings (h1, h2, code, p…) ---------- */
+.h-display, h1.t-display {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: var(--h-display-size); line-height: var(--h-display-lh);
+  letter-spacing: var(--h-display-trk); color: var(--text-primary);
+}
+h1, .h1 {
+  font-family: var(--font-heading); font-weight: 400;
+  font-size: var(--h1-size); line-height: var(--h1-lh);
+  letter-spacing: var(--h1-trk); color: var(--text-primary);
+}
+h2, .h2 {
+  font-family: var(--font-heading); font-weight: 400;
+  font-size: var(--h2-size); line-height: var(--h2-lh);
+  letter-spacing: var(--h2-trk); color: var(--text-primary);
+}
+h3, .h3 {
+  font-family: var(--font-subhead); font-weight: 700;
+  font-size: var(--h3-size); line-height: var(--h3-lh);
+  letter-spacing: var(--h3-trk); color: var(--text-primary);
+}
+p, .p {
+  font-family: var(--font-body); font-weight: 400;
+  font-size: var(--body-size); line-height: var(--body-lh);
+  color: var(--text-primary);
+}
+small, .small {
+  font-family: var(--font-body); font-weight: 400;
+  font-size: var(--small-size); line-height: var(--small-lh);
+  color: var(--text-secondary);
+}
+.micro {
+  font-family: var(--font-body); font-weight: 600;
+  font-size: var(--micro-size); letter-spacing: var(--micro-trk);
+  text-transform: uppercase; color: var(--text-muted);
+}
+code, kbd, samp, .code {
+  font-family: var(--font-mono); font-weight: 400;
+  font-size: var(--small-size); letter-spacing: -0.01em;
+  color: var(--text-primary);
+}
+
+/* Drop cap idiosyncratic rule */
+.drop-cap::first-letter {
+  font-family: var(--font-display); font-weight: 400; font-style: normal;
+  float: left; font-size: 5.4em; line-height: 0.85;
+  margin: 0.04em 0.08em -0.05em 0;
+  color: var(--color-primary-500); letter-spacing: -0.02em;
+}
+
+/* Dark override */
+[data-theme="dark"] {
+  --color-primary-50:  oklch(20% 0.04 50.7);
+  --color-primary-100: oklch(25% 0.05 50.7);
+  --color-primary-300: oklch(40% 0.09 50.7);
+  --color-primary-500: oklch(65% 0.15 50.7);
+  --color-primary-700: oklch(75% 0.11 50.7);
+  --color-primary-800: oklch(85% 0.08 50.7);
+  --color-primary-900: oklch(93% 0.04 50.7);
+
+  --color-paper:      oklch(14% 0.008 50.7);
+  --color-paper-soft: oklch(17% 0.008 50.7);
+  --color-paper-tag:  oklch(21% 0.009 50.7);
+  --color-card:       oklch(18% 0.008 50.7);
+  --color-ink:        oklch(94% 0.012 50.7);
+  --color-ink-2:      oklch(88% 0.011 50.7);
+  --color-ink-3:      oklch(75% 0.010 50.7);
+  --color-muted:      oklch(60% 0.010 50.7);
+  --color-muted-soft: oklch(45% 0.009 50.7);
+  --color-divider:    oklch(28% 0.010 50.7);
+  --color-divider-2:  oklch(35% 0.010 50.7);
+
+  --color-sage:       oklch(70% 0.06 120);
+  --color-sage-soft:  oklch(28% 0.025 120);
+  --color-warning:    oklch(78% 0.13 75);
+  --color-error:      oklch(68% 0.14 28);
+  --color-info:       oklch(72% 0.08 240);
+}

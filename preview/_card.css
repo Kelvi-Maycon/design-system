@@ -1,0 +1,28 @@
+/* Preview card shell — used by every preview/*.html card.
+   Loaded via <link> alongside the system's index.css. */
+html, body { background: var(--surface-bg); }
+.card-shell {
+  font-family: var(--font-body);
+  color: var(--text-primary);
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 700px;
+  box-sizing: border-box;
+}
+.card-shell .row {
+  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+}
+.card-shell .label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.card-shell .mono {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-secondary);
+}

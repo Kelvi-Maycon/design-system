@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="light">
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles/index.css">
+<link rel="stylesheet" href="_card.css">
+
+</head>
+<body><div class="card-shell">
+<div class="label">Focus ring & Press scale</div>
+<div style="display:flex;flex-wrap:wrap;gap:18px;align-items:center;">
+  <button class="btn btn-primary" type="button" style="box-shadow:var(--ring-focus);">Focus visible</button>
+  <button class="btn btn-outline" type="button" style="box-shadow:var(--ring-focus);">Focus visible</button>
+  <button class="btn btn-primary" type="button" style="transform:scale(0.98);">Active (0.98)</button>
+</div>
+<div class="mono">--ring-focus: 0 0 0 2px surface-bg, 0 0 0 4px primary-500<br>scale(0.98) só em :active — nunca em hover</div></div></body></html>
