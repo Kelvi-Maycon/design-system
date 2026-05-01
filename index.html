@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Design System · Paper Editorial</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles/index.css">
+<link rel="stylesheet" href="styles/showcase.css">
+</head>
+<body>
+
+<button class="theme-toggle" id="themeToggle" aria-label="Alternar tema" type="button">
+  <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+  <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+</button>
+
+<main class="shell">
+
+  <!-- ============== MANIFESTO ============== -->
+  <header class="manifesto">
+    <div class="manifesto-eyebrow">Design System · v0.1</div>
+    <h1 class="manifesto-thesis">
+      A literary <em>paper magazine</em><br>
+      reimagined as a product surface.
+    </h1>
+
+    <dl class="manifesto-grid">
+      <div class="manifesto-row"><dt>Tese</dt><dd>Editorial calmness com acento terracotta. Densidade de revista impressa, não de SaaS dashboard.</dd></div>
+      <div class="manifesto-row"><dt>Neutro</dt><dd>Warm — paper cream com undertone amarelado em todos os grays.</dd></div>
+      <div class="manifesto-row"><dt>Voice tipográfica</dt><dd>2 voices + mono. ITC Garamond Cond/Narrow para títulos · Instrument Sans para corpo · JetBrains Mono para specs.</dd></div>
+      <div class="manifesto-row"><dt>Shadow philosophy</dt><dd>Zero. Profundidade vem de alternância de surfaces (paper / paper-soft / card / tag).</dd></div>
+      <div class="manifesto-row"><dt>Hover signature</dt><dd>Texto migra pra <em>terracotta</em>. Sem scale, sem opacity, sem translate.</dd></div>
+      <div class="manifesto-row"><dt>Accent restrito</dt><dd>Primary CTA · focus ring · active state · hover signature · drop cap. Nada além disso.</dd></div>
+      <div class="manifesto-row"><dt>Idiosyncratic rule</dt><dd>Drop cap em ITC Garamond Book Condensed terracotta na primeira letra de seções. Micro labels uppercase tracking +0.16em.</dd></div>
+    </dl>
+  </header>
+
+  <!-- ============== 01 · COLOR ============== -->
+  <section>
+    <div class="section-head">
+      <div>
+        <span class="section-num">01 · Color</span>
+        <h2 class="section-title">Paleta paper &amp; terracotta</h2>
+      </div>
+      <p class="section-meta">7 stops primary OKLCH · 11 neutrals warm · 2 sage · 3 status</p>
+    </div>
+
+    <div class="palette-group">
+      <div class="palette-label">Primary — Terracotta</div>
+      <div class="swatches">
+        <div class="swatch"><div class="swatch-color" style="background:oklch(97% 0.02 50.7)"></div><div class="swatch-meta"><span class="swatch-name">Primary 50</span><span class="swatch-hex">oklch(97% 0.02 50.7)</span><span class="swatch-oklch">surface tint</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:oklch(93% 0.05 50.7)"></div><div class="swatch-meta"><span class="swatch-name">Primary 100</span><span class="swatch-hex">oklch(93% 0.05 50.7)</span><span class="swatch-oklch">subtle</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:oklch(75% 0.14 50.7)"></div><div class="swatch-meta"><span class="swatch-name">Primary 300</span><span class="swatch-hex">oklch(75% 0.14 50.7)</span><span class="swatch-oklch">soft</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#e9792b"></div><div class="swatch-meta"><span class="swatch-name">Primary 500 ★</span><span class="swatch-hex">#E9792B</span><span class="swatch-oklch">brand</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:oklch(40% 0.18 50.7)"></div><div class="swatch-meta"><span class="swatch-name">Primary 700</span><span class="swatch-hex">oklch(40% 0.18 50.7)</span><span class="swatch-oklch">hover</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:oklch(30% 0.14 50.7)"></div><div class="swatch-meta"><span class="swatch-name">Primary 800</span><span class="swatch-hex">oklch(30% 0.14 50.7)</span><span class="swatch-oklch">deep</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:oklch(20% 0.08 50.7)"></div><div class="swatch-meta"><span class="swatch-name">Primary 900</span><span class="swatch-hex">oklch(20% 0.08 50.7)</span><span class="swatch-oklch">deepest</span></div></div>
+      </div>
+    </div>
+
+    <div class="palette-group">
+      <div class="palette-label">Neutral — Paper warm</div>
+      <div class="swatches">
+        <div class="swatch"><div class="swatch-color" style="background:#fbf8f0"></div><div class="swatch-meta"><span class="swatch-name">Card</span><span class="swatch-hex">#FBF8F0</span><span class="swatch-oklch">surface card</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#f5f1e8"></div><div class="swatch-meta"><span class="swatch-name">Paper</span><span class="swatch-hex">#F5F1E8</span><span class="swatch-oklch">surface base</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#efeade"></div><div class="swatch-meta"><span class="swatch-name">Paper soft</span><span class="swatch-hex">#EFEADE</span><span class="swatch-oklch">surface alt</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#e7e1d1"></div><div class="swatch-meta"><span class="swatch-name">Tag bg</span><span class="swatch-hex">#E7E1D1</span><span class="swatch-oklch">surface tag</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#d8d2c0"></div><div class="swatch-meta"><span class="swatch-name">Divider</span><span class="swatch-hex">#D8D2C0</span><span class="swatch-oklch">border subtle</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#c7c0ac"></div><div class="swatch-meta"><span class="swatch-name">Divider 2</span><span class="swatch-hex">#C7C0AC</span><span class="swatch-oklch">border strong</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#b5af9f"></div><div class="swatch-meta"><span class="swatch-name">Muted soft</span><span class="swatch-hex">#B5AF9F</span><span class="swatch-oklch">muted+</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#8b857a"></div><div class="swatch-meta"><span class="swatch-name">Muted</span><span class="swatch-hex">#8B857A</span><span class="swatch-oklch">text muted</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#4a463e"></div><div class="swatch-meta"><span class="swatch-name">Ink 3</span><span class="swatch-hex">#4A463E</span><span class="swatch-oklch">text apoio</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#2b2822"></div><div class="swatch-meta"><span class="swatch-name">Ink 2</span><span class="swatch-hex">#2B2822</span><span class="swatch-oklch">text dark 2</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#1a1814"></div><div class="swatch-meta"><span class="swatch-name">Ink</span><span class="swatch-hex">#1A1814</span><span class="swatch-oklch">text principal</span></div></div>
+      </div>
+    </div>
+
+    <div class="palette-group">
+      <div class="palette-label">Sage — positivo / pills "rodando"</div>
+      <div class="swatches">
+        <div class="swatch"><div class="swatch-color" style="background:#dde0cc"></div><div class="swatch-meta"><span class="swatch-name">Sage soft</span><span class="swatch-hex">#DDE0CC</span><span class="swatch-oklch">pill bg / surface</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#6f7a5c"></div><div class="swatch-meta"><span class="swatch-name">Sage</span><span class="swatch-hex">#6F7A5C</span><span class="swatch-oklch">success / running</span></div></div>
+      </div>
+
+      <div style="display:flex; gap:12px; margin-top:20px; flex-wrap:wrap;">
+        <span class="pill-positive"><span class="dot"></span> Rodando</span>
+        <span class="pill-positive">✓ Concluído</span>
+        <span class="pill-positive pill-positive--filled">Ativo</span>
+      </div>
+    </div>
+
+    <div class="palette-group">
+      <div class="palette-label">Status — warning / error / info</div>
+      <div class="swatches">
+        <div class="swatch"><div class="swatch-color" style="background:oklch(70% 0.16 75)"></div><div class="swatch-meta"><span class="swatch-name">Warning</span><span class="swatch-hex">oklch(70% 0.16 75)</span><span class="swatch-oklch">hue +24</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:oklch(52% 0.18 28)"></div><div class="swatch-meta"><span class="swatch-name">Error</span><span class="swatch-hex">oklch(52% 0.18 28)</span><span class="swatch-oklch">hue −22</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:oklch(55% 0.10 240)"></div><div class="swatch-meta"><span class="swatch-name">Info</span><span class="swatch-hex">oklch(55% 0.10 240)</span><span class="swatch-oklch">hue +189</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 02 · TYPE ============== -->
+  <section>
+    <div class="section-head">
+      <div>
+        <span class="section-num">02 · Typography</span>
+        <h2 class="section-title">Duas vozes, um sistema</h2>
+      </div>
+      <p class="section-meta">Garamond Cond/Narrow nos títulos &middot; Instrument Sans no corpo &middot; JetBrains Mono nos specs</p>
+    </div>
+
+    <div class="type-stack">
+      <div class="type-row">
+        <div class="t-display">Reimagine.</div>
+        <div class="type-spec">Display<br>Garamond Bk Cond<br>78px / 0.95 / -0.025em<br>weight 400</div>
+      </div>
+      <div class="type-row">
+        <div class="t-h1">Editorial paper magazine</div>
+        <div class="type-spec">H1<br>Garamond Bk Cond<br>52px / 1 / -0.02em<br>weight 400</div>
+      </div>
+      <div class="type-row">
+        <div class="t-h2">Construção tipográfica</div>
+        <div class="type-spec">H2<br>Garamond Bk Cond<br>33px / 1.15 / -0.015em<br>weight 400</div>
+      </div>
+      <div class="type-row">
+        <div class="t-h3">Decisões de coração</div>
+        <div class="type-spec">H3<br>Garamond Bd Narrow<br>26px / 1.2 / -0.005em<br>weight 700</div>
+      </div>
+      <div class="type-row">
+        <div class="t-body drop-cap">
+          Aqui mora o corpo de texto. A página respira em creme, com tipografia clássica e acento terracotta. <em>Acentuação portuguesa</em> — ção, ã, ê, ó, à — testa o desenho dos diacríticos. O drop cap inicial usa Book Condensed em terracotta, idiossincrasia única do sistema.
+        </div>
+        <div class="type-spec">Body<br>Instrument Sans<br>17px / 1.55 / 0<br>weight 400</div>
+      </div>
+      <div class="type-row">
+        <div class="t-small">Texto secundário, com peso menor e cor de apoio. Bom pra captions, legendas, helper text e parágrafos auxiliares.</div>
+        <div class="type-spec">Small<br>Instrument Sans<br>14px / 1.5 / 0<br>weight 400</div>
+      </div>
+      <div class="type-row">
+        <div class="t-micro">Categoria · 12 de Maio</div>
+        <div class="type-spec">Micro<br>Instrument Sans<br>12px / 1 / +0.16em<br>uppercase · weight 600</div>
+      </div>
+      <div class="type-row">
+        <div class="t-mono">--color-primary-500: #E9792B;<br>--font-body: "Instrument Sans";<br>scale: 1.25 · base: 17px</div>
+        <div class="type-spec">Mono<br>JetBrains Mono<br>14px / 1.6 / -0.01em<br>code &amp; specs</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 03 · SPACING ============== -->
+  <section>
+    <div class="section-head">
+      <div>
+        <span class="section-num">03 · Spacing</span>
+        <h2 class="section-title">Grid 4pt + sub-8 micro</h2>
+      </div>
+      <p class="section-meta">2 · 3 · 6 micro · 4 · 8 · 12 · 16 · 24 · 32 · 48 · 64 · 128 escala</p>
+    </div>
+
+    <div>
+      <div class="spacing-row"><span class="spacing-token">--raw-2</span><span class="spacing-value">2px</span><span class="spacing-bar" style="width:2px"></span></div>
+      <div class="spacing-row"><span class="spacing-token">--raw-3</span><span class="spacing-value">3px</span><span class="spacing-bar" style="width:3px"></span></div>
+      <div class="spacing-row"><span class="spacing-token">--raw-4</span><span class="spacing-value">4px</span><span class="spacing-bar" style="width:4px"></span></div>
+      <div class="spacing-row"><span class="spacing-token">--raw-6</span><span class="spacing-value">6px</span><span class="spacing-bar" style="width:6px"></span></div>
+      <div class="spacing-row"><span class="spacing-token">--raw-8</span><span class="spacing-value">8px</span><span class="spacing-bar" style="width:8px"></span></div>
+      <div class="spacing-row"><span class="spacing-token">--raw-12</span><span class="spacing-value">12px</span><span class="spacing-bar" style="width:12px"></span></div>
+      <div class="spacing-row"><span class="spacing-token">--raw-16</span><span class="spacing-value">16px</span><span class="spacing-bar" style="width:16px"></span></div>
+      <div class="spacing-row"><span class="spacing-token">--raw-24</span><span class="spacing-value">24px</span><span class="spacing-bar" style="width:24px"></span></div>
+      <div class="spacing-row"><span class="spacing-token">--raw-32</span><span class="spacing-value">32px</span><span class="spacing-bar" style="width:32px"></span></div>
+      <div class="spacing-row"><span class="spacing-token">--raw-48</span><span class="spacing-value">48px</span><span class="spacing-bar" style="width:48px"></span></div>
+      <div class="spacing-row"><span class="spacing-token">--raw-64</span><span class="spacing-value">64px</span><span class="spacing-bar" style="width:64px"></span></div>
+      <div class="spacing-row"><span class="spacing-token">--raw-128</span><span class="spacing-value">128px</span><span class="spacing-bar" style="width:128px"></span></div>
+    </div>
+  </section>
+
+  <!-- ============== 04 · RADIUS ============== -->
+  <section>
+    <div class="section-head">
+      <div>
+        <span class="section-num">04 · Radius</span>
+        <h2 class="section-title">Curvas discretas, paper-feel</h2>
+      </div>
+      <p class="section-meta">Modern minimal · child = parent × 0.75</p>
+    </div>
+
+    <div class="radius-grid">
+      <div class="radius-cell" style="border-radius:2px"><span class="r-name">xs</span><span class="r-val">2px</span></div>
+      <div class="radius-cell" style="border-radius:4px"><span class="r-name">sm</span><span class="r-val">4px</span></div>
+      <div class="radius-cell" style="border-radius:8px"><span class="r-name">md</span><span class="r-val">8px</span></div>
+      <div class="radius-cell" style="border-radius:12px"><span class="r-name">lg</span><span class="r-val">12px</span></div>
+      <div class="radius-cell" style="border-radius:16px"><span class="r-name">xl</span><span class="r-val">16px</span></div>
+      <div class="radius-cell" style="border-radius:24px"><span class="r-name">2xl</span><span class="r-val">24px</span></div>
+      <div class="radius-cell" style="border-radius:9999px"><span class="r-name">full</span><span class="r-val">∞</span></div>
+    </div>
+  </section>
+
+  <!-- ============== 05 · DEPTH ============== -->
+  <section>
+    <div class="section-head">
+      <div>
+        <span class="section-num">05 · Depth</span>
+        <h2 class="section-title">Sem shadow. Surfaces.</h2>
+      </div>
+      <p class="section-meta">Shadow philosophy: zero · Profundidade = alternância de superfícies</p>
+    </div>
+
+    <div class="depth-grid">
+      <div class="depth-cell d-bg"><span class="d-label">Surface · base</span><span class="d-token">--surface-bg · #F5F1E8</span></div>
+      <div class="depth-cell d-alt"><span class="d-label">Surface · alt</span><span class="d-token">--surface-alt · #EFEADE</span></div>
+      <div class="depth-cell d-card"><span class="d-label">Surface · card</span><span class="d-token">--surface-card · #FBF8F0</span></div>
+      <div class="depth-cell d-tag"><span class="d-label">Surface · tag</span><span class="d-token">--surface-tag · #E7E1D1</span></div>
+    </div>
+  </section>
+
+  <!-- ============== 06 · MOTION ============== -->
+  <section>
+    <div class="section-head">
+      <div>
+        <span class="section-num">06 · Motion</span>
+        <h2 class="section-title">Curtas, contidas, calmas</h2>
+      </div>
+      <p class="section-meta">Bezier ease-out-quart · Anima só transform &amp; opacity</p>
+    </div>
+
+    <button class="motion-demo" type="button">Passe o cursor</button>
+
+    <div class="motion-grid">
+      <div class="motion-card"><span class="m-name">instant</span><span class="m-val">100ms</span></div>
+      <div class="motion-card"><span class="m-name">fast</span><span class="m-val">200ms</span></div>
+      <div class="motion-card"><span class="m-name">normal</span><span class="m-val">300ms</span></div>
+      <div class="motion-card"><span class="m-name">slow</span><span class="m-val">500ms</span></div>
+      <div class="motion-card"><span class="m-name">ease-out-quart</span><span class="m-val">cubic-bezier(.25,1,.5,1)</span></div>
+      <div class="motion-card"><span class="m-name">ease-out</span><span class="m-val">cubic-bezier(.16,1,.3,1)</span></div>
+    </div>
+  </section>
+
+  <!-- ============== 07 · BUTTONS ============== -->
+  <section>
+    <div class="section-head">
+      <div>
+        <span class="section-num">07 · Buttons</span>
+        <h2 class="section-title">Primary · Secondary · Outline</h2>
+      </div>
+      <p class="section-meta">3 sizes · press scale 0.98 em :active · focus ring duplo</p>
+    </div>
+
+    <div class="btn-row">
+      <span class="btn-row-label">Small</span>
+      <button class="btn btn-sm btn-primary" type="button">Salvar artigo</button>
+      <button class="btn btn-sm btn-secondary" type="button">Visualizar</button>
+      <button class="btn btn-sm btn-outline" type="button">Cancelar</button>
+      <button class="btn btn-sm btn-outline btn-icon-only" aria-label="Mais"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="5" cy="12" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="19" cy="12" r="1.5"/></svg></button>
+    </div>
+
+    <div class="btn-row">
+      <span class="btn-row-label">Medium</span>
+      <button class="btn btn-primary" type="button">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        Publicar edição
+      </button>
+      <button class="btn btn-secondary" type="button">Salvar rascunho</button>
+      <button class="btn btn-outline" type="button">Voltar</button>
+    </div>
+
+    <div class="btn-row">
+      <span class="btn-row-label">Large</span>
+      <button class="btn btn-lg btn-primary" type="button">Começar agora</button>
+      <button class="btn btn-lg btn-outline" type="button">Conheça o catálogo</button>
+    </div>
+  </section>
+
+  <!-- ============== 08 · CARDS ============== -->
+  <section>
+    <div class="section-head">
+      <div>
+        <span class="section-num">08 · Cards</span>
+        <h2 class="section-title">Composição em superfície</h2>
+      </div>
+      <p class="section-meta">Card surface · radius lg · child radius = parent × 0.75</p>
+    </div>
+
+    <div class="cards-grid">
+      <article class="card">
+        <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+        <span class="tag">Editorial</span>
+        <h3 class="card-title">Manuscritos do Atelier</h3>
+        <p class="card-body">Coleção curada de ensaios visuais e tipográficos, organizados por temperatura cromática e voz de marca.</p>
+        <a href="#" class="card-link">Ler edição</a>
+      </article>
+
+      <article class="card">
+        <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <span class="tag">Processo</span>
+        <h3 class="card-title">Decisões antes de tokens</h3>
+        <p class="card-body">Toda peça começa por uma frase-tese. Sem metáfora, design system vira commodity — coerente em detalhes, morto em personalidade.</p>
+        <a href="#" class="card-link">Ver método</a>
+      </article>
+
+      <article class="card">
+        <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.2H22l-6 4.4 2.3 7.2L12 16.4l-6.3 4.4L8 13.6 2 9.2h7.6z"/></svg>
+        <span class="tag">Princípio</span>
+        <h3 class="card-title">Constraint over freedom</h3>
+        <p class="card-body">Um bom sistema remove decisões. Cada token elimina escolha arbitrária — é o que separa coerência de improviso.</p>
+        <a href="#" class="card-link">Ler princípios</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============== 09 · COMPLIANCE ============== -->
+  <section>
+    <div class="section-head">
+      <div>
+        <span class="section-num">09 · Compliance</span>
+        <h2 class="section-title">Guardrails aplicados</h2>
+      </div>
+      <p class="section-meta">Decisões upstream auditáveis</p>
+    </div>
+
+    <div class="compliance">
+      <ul>
+        <li><strong>Fontes:</strong> ITC Garamond Cond (Book 400) em display/H1/H2 · Garamond Narrow (Bold) em H3/cards · Instrument Sans em body/UI · JetBrains Mono em specs. Separação serif-titles / sans-body deliberada.</li>
+        <li><strong>Shadow:</strong> philosophy <em>zero</em>. Profundidade vem de alternância entre 4 surfaces. Sem rgba(0,0,0,X) em lugar nenhum.</li>
+        <li><strong>Hover signature:</strong> texto migra pra terracotta — uma única interação consistente. Sem scale, sem opacity, sem translate em hover.</li>
+        <li><strong>Press scale:</strong> 0.98 só em <code>:active</code>, nunca em hover.</li>
+        <li><strong>Status colors:</strong> success em sage (#6F7A5C / #DDE0CC) — par próprio que harmoniza com terracotta. Warning/error/info derivados do accent com chroma reduzido.</li>
+        <li><strong>Dark mode:</strong> primary chroma 0.22 → 0.15 (×0.68), todos neutrals re-tintados no hue 50.7. Não é light invertido.</li>
+        <li><strong>Idiosyncratic rule:</strong> drop cap em Garamond Book Condensed terracotta + micro labels uppercase tracking +0.16em.</li>
+        <li><strong>Tokens:</strong> 3-tier (raw → semantic → component) com override dark só no Tier 2.</li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<script>
+  const root = document.documentElement;
+  const initial = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  root.setAttribute("data-theme", localStorage.getItem("ds-theme") || initial);
+
+  document.getElementById("themeToggle").addEventListener("click", () => {
+    const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    const apply = () => {
+      root.setAttribute("data-theme", next);
+      localStorage.setItem("ds-theme", next);
+    };
+    if (document.startViewTransition) document.startViewTransition(apply);
+    else apply();
+  });
+</script>
+
+</body>
+</html>

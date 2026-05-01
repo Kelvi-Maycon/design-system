@@ -1,0 +1,181 @@
+/* ============================================================
+   TOKENS · Tier 1 (raw) + Tier 2 (semantic) + Tier 3 (component)
+   Light mode default · Dark override em [data-theme="dark"]
+   ============================================================ */
+
+:root {
+  /* ---------- TIER 1 · RAW ---------- */
+  /* Spacing — 4pt base + sub-8 micro (2/3/6) */
+  --raw-2: 2px;
+  --raw-3: 3px;
+  --raw-4: 4px;
+  --raw-6: 6px;
+  --raw-8: 8px;
+  --raw-12: 12px;
+  --raw-16: 16px;
+  --raw-20: 20px;
+  --raw-24: 24px;
+  --raw-32: 32px;
+  --raw-40: 40px;
+  --raw-48: 48px;
+  --raw-64: 64px;
+  --raw-80: 80px;
+  --raw-128: 128px;
+
+  /* Radius raw */
+  --raw-radius-2: 2px;
+  --raw-radius-4: 4px;
+  --raw-radius-8: 8px;
+  --raw-radius-12: 12px;
+  --raw-radius-16: 16px;
+  --raw-radius-24: 24px;
+
+  /* Type scale — major third 1.25 · base 17px */
+  --raw-text-12: 0.75rem;
+  --raw-text-14: 0.875rem;
+  --raw-text-17: 1.0625rem;
+  --raw-text-21: 1.3125rem;
+  --raw-text-26: 1.625rem;
+  --raw-text-33: 2.0625rem;
+  --raw-text-52: 3.25rem;
+  --raw-text-78: 4.875rem;
+
+  /* ---------- TIER 2 · SEMANTIC · COLOR ---------- */
+
+  /* Primary — Terracotta · OKLCH hue 50.7 (derivado de #E9792B) */
+  --color-primary-50:  oklch(97% 0.02 50.7);
+  --color-primary-100: oklch(93% 0.05 50.7);
+  --color-primary-300: oklch(75% 0.14 50.7);
+  --color-primary-500: #e9792b;
+  --color-primary-700: oklch(40% 0.18 50.7);
+  --color-primary-800: oklch(30% 0.14 50.7);
+  --color-primary-900: oklch(20% 0.08 50.7);
+
+  /* Neutral — Paper warm */
+  --color-paper:        #f5f1e8;  /* surface base */
+  --color-paper-soft:   #efeade;  /* surface alt */
+  --color-paper-tag:    #e7e1d1;  /* surface tag */
+  --color-card:         #fbf8f0;  /* surface card */
+  --color-ink:          #1a1814;  /* texto principal */
+  --color-ink-2:        #2b2822;  /* texto escuro 2 */
+  --color-ink-3:        #4a463e;  /* texto apoio */
+  --color-muted:        #8b857a;  /* texto muted */
+  --color-muted-soft:   #b5af9f;  /* muted soft */
+  --color-divider:      #d8d2c0;  /* borda fina */
+  --color-divider-2:    #c7c0ac;  /* borda forte */
+
+  /* Sage — estados positivos / pills "rodando" */
+  --color-sage:         #6f7a5c;
+  --color-sage-soft:    #dde0cc;
+
+  /* Status */
+  --color-success:      var(--color-sage);
+  --color-success-soft: var(--color-sage-soft);
+  --color-warning:      oklch(70% 0.16 75);
+  --color-error:        oklch(52% 0.18 28);
+  --color-info:         oklch(55% 0.10 240);
+
+  /* Surfaces semantic */
+  --surface-bg:    var(--color-paper);
+  --surface-alt:   var(--color-paper-soft);
+  --surface-card:  var(--color-card);
+  --surface-tag:   var(--color-paper-tag);
+
+  /* Text semantic */
+  --text-primary:     var(--color-ink);
+  --text-secondary:   var(--color-ink-3);
+  --text-muted:       var(--color-muted);
+  --text-on-primary:  var(--color-card);
+  --text-accent:      var(--color-primary-500);
+
+  /* Borders semantic */
+  --border-subtle: var(--color-divider);
+  --border-strong: var(--color-divider-2);
+
+  /* ---------- TIER 2 · RADIUS ---------- */
+  --radius-xs:   var(--raw-radius-2);
+  --radius-sm:   var(--raw-radius-4);
+  --radius-md:   var(--raw-radius-8);
+  --radius-lg:   var(--raw-radius-12);
+  --radius-xl:   var(--raw-radius-16);
+  --radius-2xl:  var(--raw-radius-24);
+  --radius-full: 9999px;
+
+  /* ---------- TIER 2 · SHADOW ---------- */
+  /* Philosophy: ZERO. Profundidade vem de alternância de surfaces.
+     Shadow só pra focus ring (acento + surface duplo). */
+  --shadow-none: none;
+  --ring-focus:  0 0 0 2px var(--surface-bg), 0 0 0 4px var(--color-primary-500);
+
+  /* ---------- TIER 2 · MOTION ---------- */
+  --duration-instant: 100ms;
+  --duration-fast:    200ms;
+  --duration-normal:  300ms;
+  --duration-slow:    500ms;
+  --ease-out-quart:   cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-out:         cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* ---------- TIER 2 · LAYOUT ---------- */
+  --max-content: 820px;
+  --max-wide:    1200px;
+  --max-hero:    1400px;
+
+  /* ---------- TIER 3 · COMPONENT ---------- */
+  --btn-padding-sm:    var(--raw-6) var(--raw-12);
+  --btn-padding-md:    var(--raw-8) var(--raw-20);
+  --btn-padding-lg:    var(--raw-12) var(--raw-24);
+  --btn-radius:        var(--radius-sm);
+  --card-padding:      var(--raw-32);
+  --card-radius:       var(--radius-lg);
+  --card-radius-inner: calc(var(--radius-lg) * 0.75);
+  --input-padding:     var(--raw-8) var(--raw-12);
+  --icon-text-gap:     var(--raw-8);
+}
+
+/* ============================================================
+   DARK MODE — chroma × 0.6 + lightness +5% (não é light invertido)
+   ============================================================ */
+[data-theme="dark"] {
+  --color-primary-50:  oklch(20% 0.04 50.7);
+  --color-primary-100: oklch(25% 0.05 50.7);
+  --color-primary-300: oklch(40% 0.09 50.7);
+  --color-primary-500: oklch(65% 0.15 50.7);
+  --color-primary-700: oklch(75% 0.11 50.7);
+  --color-primary-800: oklch(85% 0.08 50.7);
+  --color-primary-900: oklch(93% 0.04 50.7);
+
+  --color-paper:      oklch(14% 0.008 50.7);
+  --color-paper-soft: oklch(17% 0.008 50.7);
+  --color-paper-tag:  oklch(21% 0.009 50.7);
+  --color-card:       oklch(18% 0.008 50.7);
+  --color-ink:        oklch(94% 0.012 50.7);
+  --color-ink-2:      oklch(88% 0.011 50.7);
+  --color-ink-3:      oklch(75% 0.010 50.7);
+  --color-muted:      oklch(60% 0.010 50.7);
+  --color-muted-soft: oklch(45% 0.009 50.7);
+  --color-divider:    oklch(28% 0.010 50.7);
+  --color-divider-2:  oklch(35% 0.010 50.7);
+
+  --color-sage:       oklch(70% 0.06 120);
+  --color-sage-soft:  oklch(28% 0.025 120);
+
+  --color-warning:    oklch(78% 0.13 75);
+  --color-error:      oklch(68% 0.14 28);
+  --color-info:       oklch(72% 0.08 240);
+}
+
+/* ============================================================
+   REDUCED MOTION — sistema PARALELO (fade no lugar de slide)
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-instant: 1ms;
+    --duration-fast:    1ms;
+    --duration-normal:  1ms;
+    --duration-slow:    1ms;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

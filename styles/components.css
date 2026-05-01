@@ -1,0 +1,190 @@
+/* ============================================================
+   COMPONENTS · Buttons · Cards · Tags · Theme toggle
+   ============================================================ */
+
+/* ---------- BUTTONS ---------- */
+.btn {
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  border-radius: var(--btn-radius);
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--icon-text-gap);
+  font-size: var(--raw-text-17);
+  padding: var(--btn-padding-md);
+  transition:
+    background var(--duration-fast) var(--ease-out-quart),
+    color var(--duration-fast) var(--ease-out-quart),
+    border-color var(--duration-fast) var(--ease-out-quart);
+  user-select: none;
+  white-space: nowrap;
+}
+
+.btn:active { transform: scale(0.98); }
+
+.btn:focus-visible {
+  outline: none;
+  box-shadow: var(--ring-focus);
+}
+
+.btn-sm { font-size: var(--raw-text-14); padding: var(--btn-padding-sm); }
+.btn-lg { font-size: var(--raw-text-21); padding: var(--btn-padding-lg); }
+
+.btn-primary {
+  background: var(--color-primary-500);
+  color: var(--text-on-primary);
+}
+.btn-primary:hover { background: var(--color-primary-700); }
+
+.btn-secondary {
+  background: var(--text-primary);
+  color: var(--surface-card);
+}
+.btn-secondary:hover { background: var(--color-ink-2); }
+
+.btn-outline {
+  background: transparent;
+  color: var(--text-primary);
+  border-color: var(--border-strong);
+}
+.btn-outline:hover {
+  color: var(--color-primary-500);
+  border-color: var(--color-primary-500);
+}
+
+.btn-icon-only {
+  padding: var(--raw-8);
+  width: 36px;
+  height: 36px;
+  justify-content: center;
+}
+
+/* ---------- CARDS ---------- */
+.card {
+  background: var(--surface-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--card-radius);
+  padding: var(--card-padding);
+  display: grid;
+  gap: var(--raw-16);
+  transition: border-color var(--duration-fast) var(--ease-out-quart);
+}
+.card:hover { border-color: var(--border-strong); }
+
+.card-icon {
+  width: 28px;
+  height: 28px;
+  color: var(--color-primary-500);
+}
+
+.card-title {
+  font-family: var(--font-subhead);
+  font-weight: 700;
+  font-size: var(--raw-text-26);
+  line-height: 1.2;
+  letter-spacing: -0.005em;
+  color: var(--text-primary);
+}
+
+.card-body {
+  font-family: var(--font-body);
+  font-size: var(--raw-text-17);
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.card-link {
+  font-family: var(--font-body);
+  font-weight: 600;
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: var(--raw-text-14);
+  letter-spacing: -0.005em;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color var(--duration-fast) var(--ease-out-quart);
+}
+.card-link::after {
+  content: "→";
+  transition: transform var(--duration-fast) var(--ease-out-quart);
+}
+.card-link:hover { color: var(--color-primary-500); }
+.card-link:hover::after { transform: translateX(3px); }
+
+/* ---------- TAGS / PILLS ---------- */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--surface-tag);
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: var(--raw-text-12);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: var(--card-radius-inner);
+  width: fit-content;
+}
+
+/* Status pill — sage/positivo (running, completed, active) */
+.pill-positive {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: var(--color-sage-soft);
+  color: var(--color-sage);
+  border-radius: var(--radius-full);
+  font-family: var(--font-mono);
+  font-size: var(--raw-text-12);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.pill-positive--filled {
+  background: var(--color-sage);
+  color: var(--color-sage-soft);
+}
+
+.pill-positive .dot {
+  width: 6px;
+  height: 6px;
+  background: currentColor;
+  border-radius: 50%;
+}
+
+/* ---------- THEME TOGGLE ---------- */
+.theme-toggle {
+  position: fixed;
+  top: var(--raw-24);
+  right: var(--raw-24);
+  z-index: 100;
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface-card);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  color: var(--text-primary);
+  transition:
+    color var(--duration-fast) var(--ease-out-quart),
+    border-color var(--duration-fast) var(--ease-out-quart);
+}
+.theme-toggle:hover {
+  color: var(--color-primary-500);
+  border-color: var(--color-primary-500);
+}
+.theme-toggle svg { width: 18px; height: 18px; }
+
+[data-theme="light"] .icon-sun  { display: none; }
+[data-theme="dark"]  .icon-moon { display: none; }
