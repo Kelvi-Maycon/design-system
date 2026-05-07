@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="pt-BR" data-paper-edition>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=1080" />
+<title>Paper Editorial · Guia 01 — 7 trocas pra cortar R$ 1.500/mês em IA</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<style>
+@font-face { font-family:"Garamond Cond"; src:url("./itc-garamond/ITCGaramondStd-LtCond.ttf") format("truetype"); font-weight:300; font-style:normal; font-display:swap; }
+@font-face { font-family:"Garamond Cond"; src:url("./itc-garamond/ITCGaramondStd-BkCond.ttf") format("truetype"); font-weight:400; font-style:normal; font-display:swap; }
+@font-face { font-family:"Garamond Cond"; src:url("./itc-garamond/ITCGaramondStd-BkCondIta.ttf") format("truetype"); font-weight:400; font-style:italic; font-display:swap; }
+@font-face { font-family:"Garamond Cond"; src:url("./itc-garamond/ITCGaramondStd-BdCond.ttf") format("truetype"); font-weight:700; font-style:normal; font-display:swap; }
+@font-face { font-family:"Garamond Cond"; src:url("./itc-garamond/ITCGaramondStd-BdCondIta.ttf") format("truetype"); font-weight:700; font-style:italic; font-display:swap; }
+@font-face { font-family:"Garamond Narrow"; src:url("./itc-garamond/ITCGaramondStd-BkNarrow.ttf") format("truetype"); font-weight:400; font-style:normal; font-display:swap; }
+@font-face { font-family:"Garamond Narrow"; src:url("./itc-garamond/ITCGaramondStd-BkNarrowIta.ttf") format("truetype"); font-weight:400; font-style:italic; font-display:swap; }
+@font-face { font-family:"Garamond Narrow"; src:url("./itc-garamond/ITCGaramondStd-BdNarrow.ttf") format("truetype"); font-weight:700; font-style:normal; font-display:swap; }
+
+:root{
+  --color-paper:#f5f1e8;
+  --color-paper-soft:#efeade;
+  --color-card:#fbf8f0;
+  --color-ink:#1a1814;
+  --color-ink-2:#2b2822;
+  --color-ink-3:#4a463e;
+  --color-muted:#8b857a;
+  --color-muted-soft:#b5af9f;
+  --color-divider:#d8d2c0;
+  --color-divider-2:#c7c0ac;
+  --color-primary-500:#e9792b;
+  --color-primary-600:#b85d1a;
+  --color-sage:#6f7a5c;
+
+  --font-display:"Garamond Cond",Georgia,serif;
+  --font-narrow:"Garamond Narrow",Georgia,serif;
+  --font-body:"Instrument Sans",system-ui,-apple-system,sans-serif;
+  --font-mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+
+  /* unified spacing rhythm */
+  --pad-x:80px;
+  --pad-y:64px;
+  --gap-main:40px;
+  --gap-tight:24px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#0c0a08;color:var(--color-ink);font-family:var(--font-body);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.stage{display:flex;flex-direction:column;align-items:center;gap:48px;padding:56px 24px 80px}
+
+/* SLIDE base + clean pattern (light: paper + dot grid + soft warm glow / dark: ink) */
+.slide{
+  width:1080px;height:1350px;
+  position:relative;overflow:hidden;
+  display:grid;grid-template-rows:auto 1fr auto;
+  --bg:var(--color-paper);
+  --dot:rgba(74,70,62,.045);
+  --glow:rgba(233,121,43,.06);
+  --txt:var(--color-ink);
+  background-color:var(--bg);
+  color:var(--txt);
+  background-image:
+    radial-gradient(circle at 1px 1px,var(--dot) 1px,transparent 1.5px),
+    radial-gradient(ellipse 65% 55% at var(--gx,100%) var(--gy,0%),var(--glow),transparent 60%),
+    radial-gradient(ellipse 50% 45% at var(--gx2,0%) var(--gy2,100%),var(--glow),transparent 60%);
+  background-size:18px 18px,100% 100%,100% 100%;
+  background-repeat:repeat,no-repeat,no-repeat;
+}
+.slide--soft{--bg:var(--color-paper-soft)}
+.slide--dark{
+  --bg:var(--color-ink);
+  --dot:rgba(245,241,232,.045);
+  --glow:rgba(233,121,43,.12);
+  --txt:var(--color-paper);
+}
+
+/* glow rhythm — alternating per slide */
+.slide:nth-of-type(1){--gx:100%;--gy:0%;--gx2:0%;--gy2:100%}
+.slide:nth-of-type(2){--gx:0%;--gy:0%;--gx2:100%;--gy2:100%}
+.slide:nth-of-type(3){--gx:100%;--gy:100%;--gx2:0%;--gy2:0%}
+.slide:nth-of-type(4){--gx:0%;--gy:100%;--gx2:100%;--gy2:0%}
+.slide:nth-of-type(5){--gx:100%;--gy:0%;--gx2:0%;--gy2:100%}
+.slide:nth-of-type(6){--gx:0%;--gy:0%;--gx2:100%;--gy2:100%}
+.slide:nth-of-type(7){--gx:100%;--gy:100%;--gx2:0%;--gy2:0%}
+.slide:nth-of-type(8){--gx:0%;--gy:100%;--gx2:100%;--gy2:0%}
+.slide:nth-of-type(9){--gx:50%;--gy:0%;--gx2:50%;--gy2:100%}
+.slide:nth-of-type(10){--gx:100%;--gy:0%;--gx2:0%;--gy2:100%}
+
+/* topbar */
+.tb{padding:var(--pad-y) var(--pad-x) 0;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:var(--gap-tight);position:relative;z-index:5}
+.wm{display:flex;align-items:center;gap:12px}
+.wm__dot{width:11px;height:11px;border-radius:50%;background:var(--color-primary-500);flex-shrink:0;display:inline-block}
+.wm__name{font-family:var(--font-display);font-weight:700;font-size:24px;line-height:1;letter-spacing:-.022em;color:var(--txt)}
+.wm__sep{font-family:var(--font-display);font-size:22px;color:var(--color-muted-soft);font-weight:400;line-height:1;padding:0 2px}
+.wm__edition{font-family:var(--font-narrow);font-style:italic;font-weight:400;font-size:18px;color:var(--color-ink-3);letter-spacing:-.005em;line-height:1}
+.slide--dark .wm__edition{color:var(--color-muted-soft)}
+.tb__series{justify-self:center;font-family:var(--font-mono);font-size:13px;font-weight:500;letter-spacing:.34em;text-transform:uppercase;color:var(--color-muted)}
+.tb__counter{justify-self:end;font-family:var(--font-mono);font-size:15px;font-weight:500;letter-spacing:.18em;color:var(--color-ink-3);font-variant-numeric:tabular-nums;display:flex;align-items:baseline;gap:4px}
+.slide--dark .tb__counter{color:var(--color-muted-soft)}
+.tb__counter strong{font-family:var(--font-display);font-weight:700;font-size:26px;letter-spacing:-.025em;color:var(--color-primary-500);line-height:1}
+
+/* main */
+.main{padding:0 var(--pad-x);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:var(--gap-main);position:relative;z-index:5}
+
+/* eyebrow — clean, with subtle side rules (the only ornament that survives) */
+.eyebrow{font-family:var(--font-mono);font-size:14px;font-weight:500;letter-spacing:.4em;text-transform:uppercase;color:var(--color-ink-3);display:flex;align-items:center;gap:16px}
+.slide--dark .eyebrow{color:var(--color-muted-soft)}
+.eyebrow::before,.eyebrow::after{content:"";display:block;width:32px;height:1px;background:var(--color-primary-500)}
+
+/* simple rule — no marker dots */
+.rule{display:block;width:88px;height:1px;background:var(--color-divider-2);margin:0 auto;border:0}
+.slide--dark .rule{background:rgba(245,241,232,.22)}
+
+/* bottom */
+.bt{padding:0 var(--pad-x) var(--pad-y);display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:var(--gap-tight);position:relative;z-index:5}
+.bt__handle{font-family:var(--font-mono);font-size:13px;font-weight:500;letter-spacing:.36em;text-transform:uppercase;color:var(--color-ink-3);display:flex;align-items:center;gap:10px}
+.slide--dark .bt__handle{color:var(--color-muted-soft)}
+.bt__handle .marker{color:var(--color-primary-500)}
+.bt__pips{justify-self:center;display:flex;gap:8px;align-items:center}
+.pip{width:5px;height:5px;border-radius:50%;background:var(--color-divider-2);display:inline-block}
+.slide--dark .pip{background:rgba(245,241,232,.18)}
+.pip.is-on{background:var(--color-primary-500)}
+.bt__nav{justify-self:end;font-family:var(--font-narrow);font-style:italic;font-weight:400;font-size:20px;color:var(--color-ink-3);letter-spacing:-.005em}
+.slide--dark .bt__nav{color:var(--color-muted-soft)}
+
+/* SLIDE 1 — HOOK · magazine cover */
+.s1__cover{display:flex;flex-direction:column;align-items:center;line-height:.92;gap:0}
+.s1__cover-1{font-family:var(--font-narrow);font-style:italic;font-weight:400;font-size:108px;letter-spacing:-.018em;color:var(--color-ink-3);line-height:.96}
+.s1__cover-2{font-family:var(--font-display);font-weight:400;font-size:248px;letter-spacing:-.042em;color:var(--color-primary-500);line-height:.9;margin-top:-4px}
+.s1__lede{font-family:var(--font-narrow);font-weight:400;font-size:34px;line-height:1.45;color:var(--color-ink-2);max-width:760px;text-wrap:balance;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:center;gap:0 12px}
+.s1__lede em{font-family:var(--font-narrow);font-style:italic;color:var(--color-ink-3)}
+.s1__amount{font-family:var(--font-display);font-weight:400;font-size:60px;color:var(--color-primary-500);letter-spacing:-.022em;line-height:1;display:inline-flex;align-items:baseline;gap:2px}
+.s1__amount .cur{font-size:36px;color:var(--color-primary-500);align-self:flex-start;margin-top:8px}
+.s1__cats{font-family:var(--font-mono);font-size:14px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--color-ink-3);max-width:760px;line-height:1.8}
+.s1__cats span{color:var(--color-primary-500);margin:0 8px}
+
+/* SLIDE 2 — TESE · centered manifesto */
+.s2__num{font-family:var(--font-display);font-weight:400;font-size:220px;line-height:.86;letter-spacing:-.05em;color:var(--color-primary-500);display:block}
+.s2__num-label{font-family:var(--font-mono);font-size:13px;font-weight:500;letter-spacing:.38em;text-transform:uppercase;color:var(--color-muted);display:flex;align-items:center;justify-content:center;gap:12px;margin-top:-24px}
+.s2__num-label::before,.s2__num-label::after{content:"";display:block;width:28px;height:1px;background:var(--color-divider-2)}
+.s2__lead{font-family:var(--font-display);font-weight:400;font-size:76px;line-height:1.06;letter-spacing:-.022em;color:var(--color-ink);max-width:840px;text-wrap:balance}
+.s2__lead em{font-family:var(--font-narrow);font-style:italic;font-weight:400;color:var(--color-primary-500)}
+.s2__tag{font-family:var(--font-narrow);font-style:italic;font-weight:400;font-size:40px;line-height:1.1;letter-spacing:-.01em;color:var(--color-ink-3)}
+.s2__sub{font-family:var(--font-narrow);font-weight:400;font-size:28px;line-height:1.55;color:var(--color-ink-2);max-width:660px;text-wrap:pretty}
+.s2__sub strong{font-family:var(--font-narrow);font-weight:700;color:var(--color-ink)}
+.s2__sub em{font-style:italic;color:var(--color-ink-3)}
+.s2__attribution{font-family:var(--font-mono);font-size:13px;font-weight:500;letter-spacing:.4em;text-transform:uppercase;color:var(--color-muted);display:flex;align-items:center;justify-content:center;gap:14px}
+.s2__attribution::before,.s2__attribution::after{content:"";display:block;width:20px;height:1px;background:var(--color-divider-2)}
+
+/* SLIDE 3-8 — COMPARISON */
+.cmp__folio{font-family:var(--font-mono);font-size:14px;font-weight:500;letter-spacing:.4em;text-transform:uppercase;color:var(--color-muted);display:flex;align-items:center;justify-content:center;gap:14px}
+.cmp__folio .num{color:var(--color-primary-500);font-weight:500}
+.cmp__folio .sep{color:var(--color-divider-2);font-weight:400}
+
+.cmp__title{font-family:var(--font-display);font-weight:400;font-size:108px;line-height:.94;letter-spacing:-.028em;color:var(--color-ink);display:flex;align-items:baseline;justify-content:center;gap:4px}
+.cmp__title .dot{color:var(--color-primary-500)}
+.cmp__title em{font-family:var(--font-narrow);font-style:italic;font-weight:400;font-size:.4em;color:var(--color-ink-3);margin-left:14px;letter-spacing:-.005em;align-self:center}
+
+/* CARDS — clean, centered, two-color (ink + terracotta) */
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:20px;width:100%;max-width:880px}
+.card{
+  position:relative;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:28px;
+  padding:64px 40px;
+  border-radius:32px;
+  min-height:420px;
+  text-align:center;
+  overflow:hidden;
+  isolation:isolate;
+  border:2px solid rgba(245,241,232,.32);
+  box-shadow:inset 0 1px 0 rgba(245,241,232,.1);
+}
+.card--free{border-color:rgba(245,241,232,.52);box-shadow:inset 0 1px 0 rgba(245,241,232,.22)}
+
+/* dot pattern + radial glow — matches the dark $395 slide */
+.card::before{
+  content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    radial-gradient(circle at 1px 1px,rgba(245,241,232,.075) 1px,transparent 1.5px),
+    radial-gradient(ellipse 70% 60% at 100% 0%,rgba(245,241,232,.07),transparent 60%),
+    radial-gradient(ellipse 60% 50% at 0% 100%,rgba(245,241,232,.045),transparent 60%);
+  background-size:18px 18px,100% 100%,100% 100%;
+  background-repeat:repeat,no-repeat,no-repeat;
+}
+.card > *{position:relative;z-index:1}
+
+.card__tag{display:flex;flex-direction:column;align-items:center;gap:8px;line-height:1}
+.card__tag-main{font-family:var(--font-mono);font-size:17px;font-weight:600;letter-spacing:.4em;text-transform:uppercase;color:var(--color-paper)}
+.card__tag-sub{font-family:var(--font-narrow);font-style:italic;font-weight:400;font-size:22px;letter-spacing:-.005em;color:rgba(245,241,232,.55);text-transform:none}
+
+.card__name{font-family:var(--font-display);font-weight:400;font-size:60px;line-height:1;letter-spacing:-.024em;color:var(--color-paper)}
+
+.card__price{position:relative;display:inline-flex;align-items:baseline;gap:4px;font-family:var(--font-display);font-weight:400;line-height:.9}
+.card__price-cur{font-size:50px;align-self:flex-start;margin-top:14px}
+.card__price-amount{font-size:132px;letter-spacing:-.04em}
+.card__price-unit{font-family:var(--font-narrow);font-style:italic;font-weight:400;font-size:26px;letter-spacing:-.005em;margin-left:4px}
+
+/* PAID — solid black ink */
+.card--paid{background:var(--color-ink)}
+.card--paid .card__price{color:rgba(245,241,232,.4)}
+.card--paid .card__price-cur{color:rgba(245,241,232,.3)}
+.card--paid .card__price-unit{color:rgba(245,241,232,.5)}
+.card--paid .card__price::after{
+  content:"";position:absolute;
+  left:8%;right:24%;top:54%;
+  height:5px;background:var(--color-primary-500);
+  transform:rotate(-4deg);transform-origin:center;
+  border-radius:3px;z-index:2;
+}
+
+/* FREE — solid burnt terracotta (matches reference) */
+.card--free{background:var(--color-primary-600)}
+.card--free .card__price{color:var(--color-paper)}
+.card--free .card__price-cur{color:rgba(245,241,232,.85)}
+.card--free .card__price-unit{color:rgba(245,241,232,.72)}
+
+.cmp__quote{font-family:var(--font-narrow);font-weight:400;font-size:40px;line-height:1.4;color:var(--color-ink-2);max-width:760px;text-wrap:pretty;position:relative;padding:0 40px}
+.cmp__quote::before,.cmp__quote::after{font-family:var(--font-display);font-style:italic;font-weight:400;font-size:60px;line-height:0;color:var(--color-primary-500);position:absolute;top:.48em}
+.cmp__quote::before{content:"\201C";left:-4px}
+.cmp__quote::after{content:"\201D";right:-4px}
+.cmp__quote em{font-style:italic;color:var(--color-primary-500)}
+
+.cmp__save{display:flex;flex-direction:column;align-items:center;gap:8px}
+.cmp__save .lbl{font-family:var(--font-mono);font-size:13px;font-weight:500;letter-spacing:.4em;text-transform:uppercase;color:var(--color-muted)}
+.cmp__save .val{font-family:var(--font-display);font-weight:400;font-size:44px;line-height:1;letter-spacing:-.018em;color:var(--color-primary-500);display:flex;align-items:baseline;gap:4px}
+.cmp__save .val .u{font-family:var(--font-narrow);font-style:italic;font-weight:400;font-size:24px;color:var(--color-muted)}
+
+/* SLIDE 9 — STAT */
+.s9__pre{font-family:var(--font-narrow);font-style:italic;font-weight:400;font-size:34px;color:var(--color-muted-soft);letter-spacing:-.005em}
+.s9__hero{font-family:var(--font-display);font-weight:400;font-size:288px;line-height:.86;letter-spacing:-.05em;color:var(--color-paper);display:flex;align-items:flex-end;justify-content:center;gap:12px;white-space:nowrap}
+.s9__hero .currency{font-size:160px;color:var(--color-primary-500);padding-bottom:20px;letter-spacing:-.025em}
+.s9__hero .num{color:var(--color-primary-500)}
+.s9__hero .unit{font-family:var(--font-narrow);font-style:italic;font-weight:400;font-size:46px;color:var(--color-muted-soft);padding-bottom:38px;letter-spacing:-.005em}
+.s9__year{font-family:var(--font-display);font-weight:400;font-size:56px;line-height:1;letter-spacing:-.018em;color:var(--color-paper);display:flex;align-items:baseline;justify-content:center;gap:18px;flex-wrap:wrap}
+.s9__year .pre{font-family:var(--font-mono);font-size:14px;font-weight:500;letter-spacing:.36em;text-transform:uppercase;color:var(--color-muted-soft)}
+.s9__year strong{font-family:var(--font-display);font-weight:400;color:var(--color-paper)}
+.s9__sub{font-family:var(--font-narrow);font-weight:400;font-size:30px;line-height:1.5;color:var(--color-paper);max-width:740px;text-wrap:pretty}
+.s9__sub strong{font-weight:700;color:var(--color-paper)}
+.s9__sub em{font-style:italic;color:var(--color-primary-500)}
+
+/* SLIDE 10 — CTA */
+.s10__hero{font-family:var(--font-display);font-weight:400;font-size:220px;line-height:.92;letter-spacing:-.04em;color:var(--color-ink);display:flex;align-items:baseline;justify-content:center;gap:0}
+.s10__hero .dot{color:var(--color-primary-500)}
+.s10__sub{font-family:var(--font-display);font-weight:400;font-size:60px;line-height:1.08;letter-spacing:-.02em;color:var(--color-ink-2);max-width:820px;text-wrap:balance}
+.s10__sub em{font-family:var(--font-narrow);font-style:italic;color:var(--color-ink-3)}
+.s10__handle{font-family:var(--font-display);font-weight:400;font-size:78px;line-height:1;letter-spacing:-.022em;color:var(--color-ink);display:flex;align-items:baseline;justify-content:center;gap:2px}
+.s10__handle .at{color:var(--color-primary-500);font-family:var(--font-display);font-style:italic;font-weight:400}
+.s10__cta{font-family:var(--font-mono);font-size:14px;font-weight:500;letter-spacing:.4em;text-transform:uppercase;color:var(--color-muted);display:flex;align-items:center;justify-content:center;gap:14px}
+.s10__cta::before,.s10__cta::after{content:"";width:28px;height:1px;background:var(--color-divider-2)}
+.s10__cta .arrow{color:var(--color-primary-500);font-family:var(--font-display);font-size:22px;letter-spacing:0;text-transform:none;font-weight:400}
+</style>
+</head>
+<body>
+<div class="stage">
+
+  <section class="slide" data-screen-label="01 Hook">
+    <header class="tb">
+      <div class="wm"><span class="wm__dot"></span><span class="wm__name">Paper Editorial</span><span class="wm__sep">·</span><span class="wm__edition">edição n.º 01</span></div>
+      <div class="tb__series">Guia · IA Stack 2026</div>
+      <div class="tb__counter"><strong>01</strong>/10</div>
+    </header>
+    <div class="main">
+      <span class="eyebrow">A Promessa · Guia n.º 01</span>
+      <h1 class="s1__cover">
+        <span class="s1__cover-1">Pague</span>
+        <span class="s1__cover-2">menos.</span>
+      </h1>
+      <span class="rule"></span>
+      <p class="s1__lede">Sete trocas para cortar <span class="s1__amount"><span class="cur">R$</span>1.500</span> por mês <em>em IA.</em></p>
+      <p class="s1__cats">Vídeo<span>·</span>Pesquisa<span>·</span>Imagem<span>·</span>Design<span>·</span>Copy<span>·</span>Voz<span>·</span>Marca-d'água</p>
+    </div>
+    <footer class="bt">
+      <div class="bt__handle"><span class="marker">●</span>abr · 2026</div>
+      <div class="bt__pips"><span class="pip is-on"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span></div>
+      <div class="bt__nav">arrasta →</div>
+    </footer>
+  </section>
+
+  <section class="slide slide--soft" data-screen-label="02 Tese">
+    <header class="tb">
+      <div class="wm"><span class="wm__dot"></span><span class="wm__name">Paper Editorial</span><span class="wm__sep">·</span><span class="wm__edition">edição n.º 01</span></div>
+      <div class="tb__series">Cap. 01 · A Tese</div>
+      <div class="tb__counter"><strong>02</strong>/10</div>
+    </header>
+    <div class="main">
+      <span class="eyebrow">A Tese</span>
+      <span class="s2__num" aria-hidden="true">07</span>
+      <p class="s2__num-label">trocas testadas · 3 meses</p>
+      <h2 class="s2__lead">Você tá pagando por ferramentas que já têm <em>alternativa grátis</em>.</h2>
+      <p class="s2__tag">Algumas até melhores que a versão paga.</p>
+      <span class="rule"></span>
+      <p class="s2__sub"><strong>Testei todas.</strong> <em>Sete categorias, sete trocas, e um total no fim que você não vai querer ignorar.</em></p>
+      <p class="s2__attribution">abr · 2026</p>
+    </div>
+    <footer class="bt">
+      <div class="bt__handle"><span class="marker">●</span>abr · 2026</div>
+      <div class="bt__pips"><span class="pip"></span><span class="pip is-on"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span></div>
+      <div class="bt__nav">premissa</div>
+    </footer>
+  </section>
+
+  <section class="slide" data-screen-label="03 Vídeo">
+    <header class="tb">
+      <div class="wm"><span class="wm__dot"></span><span class="wm__name">Paper Editorial</span><span class="wm__sep">·</span><span class="wm__edition">edição n.º 01</span></div>
+      <div class="tb__series">Guia · IA Stack 2026</div>
+      <div class="tb__counter"><strong>03</strong>/10</div>
+    </header>
+    <div class="main">
+      <span class="cmp__folio"><span class="num">01</span><span class="sep">/</span><span>06 trocas</span></span>
+      <h2 class="cmp__title">Vídeo<span class="dot">.</span><em>geração</em></h2>
+      <span class="rule"></span>
+      <div class="cards">
+        <article class="card card--paid">
+          <div class="card__tag"><span class="card__tag-main">Pago</span><span class="card__tag-sub">você paga</span></div>
+          <h3 class="card__name">Google&nbsp;Veo&nbsp;3</h3>
+          <p class="card__price"><span class="card__price-cur">$</span><span class="card__price-amount">250</span><span class="card__price-unit">/mês</span></p>
+        </article>
+        <article class="card card--free">
+          <div class="card__tag"><span class="card__tag-main">Grátis</span><span class="card__tag-sub">use de graça</span></div>
+          <h3 class="card__name">DeedVid&nbsp;AI</h3>
+          <p class="card__price"><span class="card__price-cur">$</span><span class="card__price-amount">0</span><span class="card__price-unit">grátis</span></p>
+        </article>
+      </div>
+      <p class="cmp__quote">Pra noventa por cento dos usos, <em>a versão grátis resolve</em>. Veo 3 só justifica em produção comercial pesada.</p>
+      <div class="cmp__save"><span class="lbl">Economia desta troca</span><span class="val">$250<span class="u">/mês</span></span></div>
+    </div>
+    <footer class="bt">
+      <div class="bt__handle"><span class="marker">●</span>abr · 2026</div>
+      <div class="bt__pips"><span class="pip"></span><span class="pip"></span><span class="pip is-on"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span></div>
+      <div class="bt__nav">cap. 02 · vídeo</div>
+    </footer>
+  </section>
+
+  <section class="slide slide--soft" data-screen-label="04 Pesquisa">
+    <header class="tb">
+      <div class="wm"><span class="wm__dot"></span><span class="wm__name">Paper Editorial</span><span class="wm__sep">·</span><span class="wm__edition">edição n.º 01</span></div>
+      <div class="tb__series">Guia · IA Stack 2026</div>
+      <div class="tb__counter"><strong>04</strong>/10</div>
+    </header>
+    <div class="main">
+      <span class="cmp__folio"><span class="num">02</span><span class="sep">/</span><span>06 trocas</span></span>
+      <h2 class="cmp__title">Pesquisa<span class="dot">.</span><em>raciocínio</em></h2>
+      <span class="rule"></span>
+      <div class="cards">
+        <article class="card card--paid">
+          <div class="card__tag"><span class="card__tag-main">Pago</span><span class="card__tag-sub">você paga</span></div>
+          <h3 class="card__name">ChatGPT&nbsp;Plus</h3>
+          <p class="card__price"><span class="card__price-cur">$</span><span class="card__price-amount">20</span><span class="card__price-unit">/mês</span></p>
+        </article>
+        <article class="card card--free">
+          <div class="card__tag"><span class="card__tag-main">Grátis</span><span class="card__tag-sub">use de graça</span></div>
+          <h3 class="card__name">DeepSeek</h3>
+          <p class="card__price"><span class="card__price-cur">$</span><span class="card__price-amount">0</span><span class="card__price-unit">grátis</span></p>
+        </article>
+      </div>
+      <p class="cmp__quote">DeepSeek lidera em <em>raciocínio matemático e código</em> em vários benchmarks. Em síntese longa, empata com Plus.</p>
+      <div class="cmp__save"><span class="lbl">Economia desta troca</span><span class="val">$20<span class="u">/mês</span></span></div>
+    </div>
+    <footer class="bt">
+      <div class="bt__handle"><span class="marker">●</span>abr · 2026</div>
+      <div class="bt__pips"><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip is-on"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span></div>
+      <div class="bt__nav">cap. 03 · pesquisa</div>
+    </footer>
+  </section>
+
+  <section class="slide" data-screen-label="05 Imagem">
+    <header class="tb">
+      <div class="wm"><span class="wm__dot"></span><span class="wm__name">Paper Editorial</span><span class="wm__sep">·</span><span class="wm__edition">edição n.º 01</span></div>
+      <div class="tb__series">Guia · IA Stack 2026</div>
+      <div class="tb__counter"><strong>05</strong>/10</div>
+    </header>
+    <div class="main">
+      <span class="cmp__folio"><span class="num">03</span><span class="sep">/</span><span>06 trocas</span></span>
+      <h2 class="cmp__title">Imagem<span class="dot">.</span><em>criação</em></h2>
+      <span class="rule"></span>
+      <div class="cards">
+        <article class="card card--paid">
+          <div class="card__tag"><span class="card__tag-main">Pago</span><span class="card__tag-sub">você paga</span></div>
+          <h3 class="card__name">Midjourney</h3>
+          <p class="card__price"><span class="card__price-cur">$</span><span class="card__price-amount">60</span><span class="card__price-unit">/mês</span></p>
+        </article>
+        <article class="card card--free">
+          <div class="card__tag"><span class="card__tag-main">Grátis</span><span class="card__tag-sub">use de graça</span></div>
+          <h3 class="card__name">Leonardo&nbsp;AI</h3>
+          <p class="card__price"><span class="card__price-cur">$</span><span class="card__price-amount">0</span><span class="card__price-unit">grátis</span></p>
+        </article>
+      </div>
+      <p class="cmp__quote">Tier grátis generoso e <em>qualidade profissional</em> pra capa, mockup e key-art. Midjourney só compensa em volume alto.</p>
+      <div class="cmp__save"><span class="lbl">Economia desta troca</span><span class="val">$60<span class="u">/mês</span></span></div>
+    </div>
+    <footer class="bt">
+      <div class="bt__handle"><span class="marker">●</span>abr · 2026</div>
+      <div class="bt__pips"><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip is-on"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span></div>
+      <div class="bt__nav">cap. 04 · imagem</div>
+    </footer>
+  </section>
+
+  <section class="slide slide--soft" data-screen-label="06 Design">
+    <header class="tb">
+      <div class="wm"><span class="wm__dot"></span><span class="wm__name">Paper Editorial</span><span class="wm__sep">·</span><span class="wm__edition">edição n.º 01</span></div>
+      <div class="tb__series">Guia · IA Stack 2026</div>
+      <div class="tb__counter"><strong>06</strong>/10</div>
+    </header>
+    <div class="main">
+      <span class="cmp__folio"><span class="num">04</span><span class="sep">/</span><span>06 trocas</span></span>
+      <h2 class="cmp__title">Design<span class="dot">.</span><em>layout</em></h2>
+      <span class="rule"></span>
+      <div class="cards">
+        <article class="card card--paid">
+          <div class="card__tag"><span class="card__tag-main">Pago</span><span class="card__tag-sub">você paga</span></div>
+          <h3 class="card__name">Canva&nbsp;Pro</h3>
+          <p class="card__price"><span class="card__price-cur">$</span><span class="card__price-amount">14</span><span class="card__price-unit">/mês</span></p>
+        </article>
+        <article class="card card--free">
+          <div class="card__tag"><span class="card__tag-main">Grátis</span><span class="card__tag-sub">use de graça</span></div>
+          <h3 class="card__name">MS&nbsp;Designer</h3>
+          <p class="card__price"><span class="card__price-cur">$</span><span class="card__price-amount">0</span><span class="card__price-unit">grátis</span></p>
+        </article>
+      </div>
+      <p class="cmp__quote">Faz tudo com <em>IA integrada</em> — post, capa, carrossel, banner — e custa zero. Canva Pro só justifica time grande.</p>
+      <div class="cmp__save"><span class="lbl">Economia desta troca</span><span class="val">$14<span class="u">/mês</span></span></div>
+    </div>
+    <footer class="bt">
+      <div class="bt__handle"><span class="marker">●</span>abr · 2026</div>
+      <div class="bt__pips"><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip is-on"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span></div>
+      <div class="bt__nav">cap. 05 · design</div>
+    </footer>
+  </section>
+
+  <section class="slide" data-screen-label="07 Copy">
+    <header class="tb">
+      <div class="wm"><span class="wm__dot"></span><span class="wm__name">Paper Editorial</span><span class="wm__sep">·</span><span class="wm__edition">edição n.º 01</span></div>
+      <div class="tb__series">Guia · IA Stack 2026</div>
+      <div class="tb__counter"><strong>07</strong>/10</div>
+    </header>
+    <div class="main">
+      <span class="cmp__folio"><span class="num">05</span><span class="sep">/</span><span>06 trocas</span></span>
+      <h2 class="cmp__title">Copy<span class="dot">.</span><em>escrita</em></h2>
+      <span class="rule"></span>
+      <div class="cards">
+        <article class="card card--paid">
+          <div class="card__tag"><span class="card__tag-main">Pago</span><span class="card__tag-sub">você paga</span></div>
+          <h3 class="card__name">Rytr</h3>
+          <p class="card__price"><span class="card__price-cur">$</span><span class="card__price-amount">9</span><span class="card__price-unit">/mês</span></p>
+        </article>
+        <article class="card card--free">
+          <div class="card__tag"><span class="card__tag-main">Grátis</span><span class="card__tag-sub">use de graça</span></div>
+          <h3 class="card__name">WriteSonic</h3>
+          <p class="card__price"><span class="card__price-cur">$</span><span class="card__price-amount">0</span><span class="card__price-unit">grátis</span></p>
+        </article>
+      </div>
+      <p class="cmp__quote">O plano grátis cobre <em>a maioria dos workflows</em> — landing, e-mail, anúncio curto, descrição.</p>
+      <div class="cmp__save"><span class="lbl">Economia desta troca</span><span class="val">$9<span class="u">/mês</span></span></div>
+    </div>
+    <footer class="bt">
+      <div class="bt__handle"><span class="marker">●</span>abr · 2026</div>
+      <div class="bt__pips"><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip is-on"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span></div>
+      <div class="bt__nav">cap. 06 · copy</div>
+    </footer>
+  </section>
+
+  <section class="slide slide--soft" data-screen-label="08 Voz">
+    <header class="tb">
+      <div class="wm"><span class="wm__dot"></span><span class="wm__name">Paper Editorial</span><span class="wm__sep">·</span><span class="wm__edition">edição n.º 01</span></div>
+      <div class="tb__series">Guia · IA Stack 2026</div>
+      <div class="tb__counter"><strong>08</strong>/10</div>
+    </header>
+    <div class="main">
+      <span class="cmp__folio"><span class="num">06</span><span class="sep">/</span><span>06 trocas</span></span>
+      <h2 class="cmp__title">Voz<span class="dot">.</span><em>narração</em></h2>
+      <span class="rule"></span>
+      <div class="cards">
+        <article class="card card--paid">
+          <div class="card__tag"><span class="card__tag-main">Pago</span><span class="card__tag-sub">você paga</span></div>
+          <h3 class="card__name">ElevenLabs</h3>
+          <p class="card__price"><span class="card__price-cur">$</span><span class="card__price-amount">22</span><span class="card__price-unit">/mês</span></p>
+        </article>
+        <article class="card card--free">
+          <div class="card__tag"><span class="card__tag-main">Grátis</span><span class="card__tag-sub">use de graça</span></div>
+          <h3 class="card__name">Speechify</h3>
+          <p class="card__price"><span class="card__price-cur">$</span><span class="card__price-amount">0</span><span class="card__price-unit">grátis</span></p>
+        </article>
+      </div>
+      <p class="cmp__quote">Voz natural <em>de graça</em>. Perfeito pra podcast, narração de carrossel e reel. ElevenLabs só ganha em clonagem.</p>
+      <div class="cmp__save"><span class="lbl">Economia desta troca</span><span class="val">$22<span class="u">/mês</span></span></div>
+    </div>
+    <footer class="bt">
+      <div class="bt__handle"><span class="marker">●</span>abr · 2026</div>
+      <div class="bt__pips"><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip is-on"></span><span class="pip"></span><span class="pip"></span></div>
+      <div class="bt__nav">cap. 07 · voz</div>
+    </footer>
+  </section>
+
+  <section class="slide slide--dark" data-screen-label="09 Stat">
+    <header class="tb">
+      <div class="wm"><span class="wm__dot"></span><span class="wm__name" style="color:var(--color-paper)">Paper Editorial</span><span class="wm__sep">·</span><span class="wm__edition">edição n.º 01</span></div>
+      <div class="tb__series">Cap. 08 · A Conta</div>
+      <div class="tb__counter"><strong>09</strong>/10</div>
+    </header>
+    <div class="main">
+      <span class="eyebrow">Total · Conta Fechada</span>
+      <p class="s9__pre">No fim, dá pra cortar</p>
+      <h2 class="s9__hero"><span class="currency">$</span><span class="num">395</span><span class="unit">/mês</span></h2>
+      <p class="s9__year"><span class="pre">No ano</span><strong>= US$&nbsp;4.740</strong></p>
+      <span class="rule"></span>
+      <p class="s9__sub">Meu stack agora: <strong>uma paga âncora</strong> — a que você mais usa — e <em>cinco grátis cobrindo o resto</em>. Simples assim.</p>
+    </div>
+    <footer class="bt">
+      <div class="bt__handle"><span class="marker">●</span>abr · 2026</div>
+      <div class="bt__pips"><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip is-on"></span><span class="pip"></span></div>
+      <div class="bt__nav">total · 7 trocas</div>
+    </footer>
+  </section>
+
+  <section class="slide" data-screen-label="10 CTA">
+    <header class="tb">
+      <div class="wm"><span class="wm__dot"></span><span class="wm__name">Paper Editorial</span><span class="wm__sep">·</span><span class="wm__edition">edição n.º 01</span></div>
+      <div class="tb__series">Fim · Obrigado</div>
+      <div class="tb__counter"><strong>10</strong>/10</div>
+    </header>
+    <div class="main">
+      <span class="eyebrow">Última Página</span>
+      <h2 class="s10__hero"><span>Salva</span><span class="dot">.</span></h2>
+      <p class="s10__sub">Manda pro colega <em>que ainda tá pagando</em> por tudo.</p>
+      <span class="rule"></span>
+      <p class="s10__handle"><span class="at">@</span><span>seu.perfil</span></p>
+      <p class="s10__cta">Próxima edição<span class="arrow">→</span>toda quarta</p>
+    </div>
+    <footer class="bt">
+      <div class="bt__handle"><span class="marker">●</span>abr · 2026</div>
+      <div class="bt__pips"><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip is-on"></span></div>
+      <div class="bt__nav">edição 01 · fim</div>
+    </footer>
+  </section>
+
+</div>
+</body>
+</html>
