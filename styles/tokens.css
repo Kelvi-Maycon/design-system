@@ -113,8 +113,8 @@
   --ring-focus:  0 0 0 2px var(--surface-bg), 0 0 0 4px var(--color-primary-500);
 
   /* ---------- TIER 2 · PATTERN ---------- */
-  /* Dotted paper — pontos sutis a cada 22px, opacidade ~14% */
-  --pattern-dot:    var(--color-muted-soft);
+  /* Dotted paper — pontos sutis a cada 22px, opacidade ~26% light */
+  --pattern-dot:    oklch(from var(--color-muted-soft) l c h / 0.26);
   --pattern-dot-bg:
     radial-gradient(circle at 1px 1px, var(--pattern-dot) 1px, transparent 0);
   --pattern-dot-size: 22px 22px;
@@ -174,6 +174,9 @@
   --color-warning:    oklch(78% 0.13 75);
   --color-error:      oklch(68% 0.14 28);
   --color-info:       oklch(72% 0.08 240);
+
+  /* Pattern override — dark mode ~22% */
+  --pattern-dot:    oklch(from var(--color-muted-soft) l c h / 0.22);
 }
 
 /* ============================================================

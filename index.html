@@ -32,16 +32,17 @@
     <dl class="manifesto-grid">
       <div class="manifesto-row"><dt>Tese</dt><dd>Editorial calmness com acento terracotta. Densidade de revista impressa, não de SaaS dashboard.</dd></div>
       <div class="manifesto-row"><dt>Neutro</dt><dd>Warm — paper cream com undertone amarelado em todos os grays.</dd></div>
-      <div class="manifesto-row"><dt>Voice tipográfica</dt><dd>2 voices + mono. ITC Garamond Cond/Narrow para títulos · Instrument Sans para corpo · JetBrains Mono para specs.</dd></div>
+      <div class="manifesto-row"><dt>Voice tipográfica</dt><dd>Garamond Cond só em Display/H1/H2 (roman). A partir de H3 tudo é Garamond Narrow Bd 700. Body em Instrument Sans, specs em JetBrains Mono.</dd></div>
+      <div class="manifesto-row"><dt>Italic policy</dt><dd>Toda ênfase serif — qualquer &lt;em&gt; em títulos — usa Garamond <em>Narrow</em> Italic. Cond Italic é compactada demais e fica proibida.</dd></div>
       <div class="manifesto-row"><dt>Shadow philosophy</dt><dd>Zero. Profundidade vem de alternância de surfaces (paper / paper-soft / card / tag).</dd></div>
-      <div class="manifesto-row"><dt>Hover signature</dt><dd>Texto migra pra <em>terracotta</em>. Sem scale, sem opacity, sem translate.</dd></div>
-      <div class="manifesto-row"><dt>Accent restrito</dt><dd>Primary CTA · focus ring · active state · hover signature · drop cap. Nada além disso.</dd></div>
-      <div class="manifesto-row"><dt>Idiosyncratic rule</dt><dd>Drop cap em ITC Garamond Book Condensed terracotta na primeira letra de seções. Micro labels uppercase tracking +0.16em.</dd></div>
+      <div class="manifesto-row"><dt>Hover signature</dt><dd>Texto migra pra <em style="color:var(--color-primary-500)">terracotta</em>. Sem scale, sem opacity, sem translate.</dd></div>
+      <div class="manifesto-row"><dt>Accent restrito</dt><dd>Primary CTA · focus ring · active state · hover signature de texto. Sem letras grandes laranjas fora do fluxo do texto.</dd></div>
+      <div class="manifesto-row"><dt>Hierarquia</dt><dd>Salto de família + peso entre H2 e H3 garante leitura clara. Micro labels uppercase tracking +0.16em em mono.</dd></div>
     </dl>
   </header>
 
   <!-- ============== 01 · COLOR ============== -->
-  <section>
+  <section class="bg-dotted-soft">
     <div class="section-head">
       <div>
         <span class="section-num">01 · Color</span>
@@ -86,7 +87,6 @@
         <div class="swatch"><div class="swatch-color" style="background:#dde0cc"></div><div class="swatch-meta"><span class="swatch-name">Sage soft</span><span class="swatch-hex">#DDE0CC</span><span class="swatch-oklch">pill bg / surface</span></div></div>
         <div class="swatch"><div class="swatch-color" style="background:#6f7a5c"></div><div class="swatch-meta"><span class="swatch-name">Sage</span><span class="swatch-hex">#6F7A5C</span><span class="swatch-oklch">success / running</span></div></div>
       </div>
-
       <div style="display:flex; gap:12px; margin-top:20px; flex-wrap:wrap;">
         <span class="pill-positive"><span class="dot"></span> Rodando</span>
         <span class="pill-positive">✓ Concluído</span>
@@ -109,45 +109,53 @@
     <div class="section-head">
       <div>
         <span class="section-num">02 · Typography</span>
-        <h2 class="section-title">Duas vozes, um sistema</h2>
+        <h2 class="section-title">Hierarquia clara, duas vozes</h2>
       </div>
-      <p class="section-meta">Garamond Cond/Narrow nos títulos &middot; Instrument Sans no corpo &middot; JetBrains Mono nos specs</p>
+      <p class="section-meta">Garamond Cond só em H1/H2 · Narrow Bd 700 a partir de H3 · todo italic em Narrow</p>
     </div>
 
     <div class="type-stack">
       <div class="type-row">
         <div class="t-display">Reimagine.</div>
-        <div class="type-spec">Display<br>Garamond Bk Cond<br>78px / 0.95 / -0.025em<br>weight 400</div>
+        <div class="type-spec">Display<br>Garamond Bk Cond · roman<br>78px / 0.95 / -0.025em<br>weight 400<br><span class="type-guardrail">display · h1 · h2 only</span></div>
       </div>
       <div class="type-row">
         <div class="t-h1">Editorial paper magazine</div>
-        <div class="type-spec">H1<br>Garamond Bk Cond<br>52px / 1 / -0.02em<br>weight 400</div>
+        <div class="type-spec">H1<br>Garamond Bk Cond · roman<br>52px / 1 / -0.02em<br>weight 400<br><span class="type-guardrail">cond · nunca italic</span></div>
       </div>
       <div class="type-row">
         <div class="t-h2">Construção tipográfica</div>
-        <div class="type-spec">H2<br>Garamond Bk Cond<br>33px / 1.15 / -0.015em<br>weight 400</div>
+        <div class="type-spec">H2<br>Garamond Bk Cond · roman<br>42px / 1.1 / -0.018em<br>weight 400<br><span class="type-guardrail">último nível em Cond</span></div>
       </div>
       <div class="type-row">
         <div class="t-h3">Decisões de coração</div>
-        <div class="type-spec">H3<br>Garamond Bd Narrow<br>26px / 1.2 / -0.005em<br>weight 700</div>
+        <div class="type-spec">H3<br>Garamond Bd Narrow<br>26px / 1.2 / -0.005em<br>weight 700<br><span class="type-guardrail">muda de família + peso</span></div>
       </div>
       <div class="type-row">
-        <div class="t-body drop-cap">
-          Aqui mora o corpo de texto. A página respira em creme, com tipografia clássica e acento terracotta. <em>Acentuação portuguesa</em> — ção, ã, ê, ó, à — testa o desenho dos diacríticos. O drop cap inicial usa Book Condensed em terracotta, idiossincrasia única do sistema.
-        </div>
-        <div class="type-spec">Body<br>Instrument Sans<br>17px / 1.55 / 0<br>weight 400</div>
+        <div class="t-h4">Subtítulo de card</div>
+        <div class="type-spec">H4<br>Garamond Bd Narrow<br>21px / 1.25 / -0.003em<br>weight 700<br><span class="type-guardrail">cards · subseções</span></div>
+      </div>
+      <div class="type-row">
+        <div class="t-h2">Voz <em>idiossincrática</em> em Narrow.</div>
+        <div class="type-spec">Italic policy<br>Garamond Narrow Italic<br>herda tamanho/peso do parent<br>Cond italic é proibida<br><span class="type-guardrail">todo &lt;em&gt; serif → Narrow</span></div>
+      </div>
+      <div class="type-row">
+        <p class="t-body">
+          Aqui mora o corpo de texto. A página respira em creme, com tipografia clássica e acento terracotta restrito a CTAs, focus ring e estados ativos. <em>Acentuação portuguesa</em> — ção, ã, ê, ó, à — testa o desenho dos diacríticos.
+        </p>
+        <div class="type-spec">Body<br>Instrument Sans<br>17px / 1.55 / 0<br>weight 400<br><span class="type-guardrail">nunca abaixo de 17px</span></div>
       </div>
       <div class="type-row">
         <div class="t-small">Texto secundário, com peso menor e cor de apoio. Bom pra captions, legendas, helper text e parágrafos auxiliares.</div>
-        <div class="type-spec">Small<br>Instrument Sans<br>14px / 1.5 / 0<br>weight 400</div>
+        <div class="type-spec">Small<br>Instrument Sans<br>14px / 1.5 / 0<br>weight 400<br><span class="type-guardrail">captions · helper</span></div>
       </div>
       <div class="type-row">
         <div class="t-micro">Categoria · 12 de Maio</div>
-        <div class="type-spec">Micro<br>Instrument Sans<br>12px / 1 / +0.16em<br>uppercase · weight 600</div>
+        <div class="type-spec">Micro<br>Instrument Sans<br>12px / 1 / +0.16em<br>uppercase · weight 600<br><span class="type-guardrail">eyebrows · metadados</span></div>
       </div>
       <div class="type-row">
         <div class="t-mono">--color-primary-500: #E9792B;<br>--font-body: "Instrument Sans";<br>scale: 1.25 · base: 17px</div>
-        <div class="type-spec">Mono<br>JetBrains Mono<br>14px / 1.6 / -0.01em<br>code &amp; specs</div>
+        <div class="type-spec">Mono<br>JetBrains Mono<br>14px / 1.6 / -0.01em<br>code &amp; specs<br><span class="type-guardrail">tokens · specs · tags</span></div>
       </div>
     </div>
   </section>
@@ -244,33 +252,71 @@
     <div class="section-head">
       <div>
         <span class="section-num">07 · Buttons</span>
-        <h2 class="section-title">Primary · Secondary · Outline</h2>
+        <h2 class="section-title">Pílulas com personalidade</h2>
       </div>
-      <p class="section-meta">3 sizes · press scale 0.98 em :active · focus ring duplo</p>
+      <p class="section-meta">Sempre ícone leading · pill radius · keyboard hints · ghost · FAB</p>
     </div>
 
     <div class="btn-row">
       <span class="btn-row-label">Small</span>
-      <button class="btn btn-sm btn-primary" type="button">Salvar artigo</button>
-      <button class="btn btn-sm btn-secondary" type="button">Visualizar</button>
-      <button class="btn btn-sm btn-outline" type="button">Cancelar</button>
-      <button class="btn btn-sm btn-outline btn-icon-only" aria-label="Mais"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="5" cy="12" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="19" cy="12" r="1.5"/></svg></button>
+      <button class="btn btn-sm btn-primary" type="button">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+        Nova edição
+      </button>
+      <button class="btn btn-sm btn-secondary" type="button">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h12v17l-6-4-6 4z"/><circle cx="12" cy="11" r="1.4" fill="currentColor" stroke="none"/></svg>
+        Salvar
+      </button>
+      <button class="btn btn-sm btn-outline" type="button">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12"/><path d="M18 6L6 18"/></svg>
+        Cancelar
+      </button>
+      <button class="btn btn-sm btn-ghost" type="button">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4l11-11-4-4L4 16z"/><path d="M14 5l4 4"/></svg>
+        Editar
+      </button>
+      <button class="btn btn-sm btn-outline btn-icon-only" aria-label="Mais">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="6" cy="12" r="1.4" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none"/><circle cx="18" cy="12" r="1.4" fill="currentColor" stroke="none"/></svg>
+      </button>
     </div>
 
     <div class="btn-row">
       <span class="btn-row-label">Medium</span>
       <button class="btn btn-primary" type="button">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4c-3 9-7 13-13 13l-1 4 4-1c10 0 14-4 14-13"/><path d="M6 17l8-8"/></svg>
         Publicar edição
       </button>
-      <button class="btn btn-secondary" type="button">Salvar rascunho</button>
-      <button class="btn btn-outline" type="button">Voltar</button>
+      <button class="btn btn-secondary" type="button">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V8"/><path d="M7 13l5-5 5 5"/><path d="M5 4h14"/></svg>
+        Importar
+      </button>
+      <button class="btn btn-outline" type="button">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.3-4.3"/></svg>
+        Pesquisar
+        <span class="kbd">⌘ K</span>
+      </button>
+      <button class="btn btn-ghost" type="button">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M11 18l-6-6 6-6"/></svg>
+        Voltar
+      </button>
     </div>
 
     <div class="btn-row">
       <span class="btn-row-label">Large</span>
-      <button class="btn btn-lg btn-primary" type="button">Começar agora</button>
-      <button class="btn btn-lg btn-outline" type="button">Conheça o catálogo</button>
+      <button class="btn btn-lg btn-primary" type="button">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M5 8.5l14 7"/><path d="M5 15.5l14-7"/></svg>
+        Começar agora
+      </button>
+      <button class="btn btn-lg btn-outline" type="button">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6l5 5v11H9z"/><path d="M15 3v5h5"/><path d="M5 7v14h11"/></svg>
+        Conheça o catálogo
+      </button>
+      <button class="btn btn-lg btn-secondary btn-icon-only" aria-label="Configurações">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3"/><path d="M12 19v3"/><path d="M4.2 4.2l2.1 2.1"/><path d="M17.7 17.7l2.1 2.1"/><path d="M2 12h3"/><path d="M19 12h3"/><path d="M4.2 19.8l2.1-2.1"/><path d="M17.7 6.3l2.1-2.1"/></svg>
+      </button>
+      <button class="fab" aria-label="Criar">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+      </button>
     </div>
   </section>
 
@@ -279,43 +325,473 @@
     <div class="section-head">
       <div>
         <span class="section-num">08 · Cards</span>
-        <h2 class="section-title">Composição em superfície</h2>
+        <h2 class="section-title">Editorial · com personalidade</h2>
       </div>
-      <p class="section-meta">Card surface · radius lg · child radius = parent × 0.75</p>
+      <p class="section-meta">Eyebrow mono · ícone-bloco · headline italic · footer dividido · variantes cover/dotted</p>
     </div>
 
+    <h4 class="sub-section-title">Editorial · horizontal</h4>
+    <div class="cards-stack">
+      <article class="ed-card">
+        <div class="ed-badge">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M5 8.5l14 7"/><path d="M5 15.5l14-7"/></svg>
+        </div>
+        <div>
+          <div class="ed-headline">10 automações com IA que <span class="tag-inline">na verdade</span> trabalham</div>
+          <div class="ed-sub">Fluxos de trabalho reais testados em ambientes de produção. Não é teoria.</div>
+        </div>
+        <div class="ed-meta">
+          <span class="ed-meta-label">Edição</span>
+          <span class="ed-meta-value">01</span>
+        </div>
+        <div style="display:flex; align-items:stretch; gap:14px;">
+          <div class="ed-meta">
+            <span class="ed-meta-label">Lançamento</span>
+            <span class="ed-meta-value ed-meta-value--accent">Março 2026</span>
+          </div>
+          <div class="ed-dots"><span></span><span></span><span></span></div>
+        </div>
+      </article>
+
+      <article class="ed-card">
+        <div class="ed-badge">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h12v17l-6-4-6 4z"/><circle cx="12" cy="11" r="1.4" fill="currentColor" stroke="none"/></svg>
+        </div>
+        <div>
+          <div class="ed-headline">Manuscritos do Atelier <span class="tag-inline">curado</span></div>
+          <div class="ed-sub">Coleção curada de ensaios visuais, organizados por temperatura cromática.</div>
+        </div>
+        <div class="ed-meta">
+          <span class="ed-meta-label">Edição</span>
+          <span class="ed-meta-value">02</span>
+        </div>
+        <div style="display:flex; align-items:stretch; gap:14px;">
+          <div class="ed-meta">
+            <span class="ed-meta-label">Status</span>
+            <span class="ed-meta-value">Em revisão</span>
+          </div>
+          <div class="ed-dots"><span></span><span></span><span></span></div>
+        </div>
+      </article>
+
+      <article class="ed-card">
+        <div class="ed-badge">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg>
+        </div>
+        <div>
+          <div class="ed-headline">Decisões antes de tokens — método em <em>4 atos</em></div>
+          <div class="ed-sub">Toda peça começa por uma frase-tese. Sem metáfora, design system vira commodity.</div>
+        </div>
+        <div class="ed-meta">
+          <span class="ed-meta-label">Edição</span>
+          <span class="ed-meta-value">03</span>
+        </div>
+        <div style="display:flex; align-items:stretch; gap:14px;">
+          <div class="ed-meta">
+            <span class="ed-meta-label">Publicado</span>
+            <span class="ed-meta-value">Fev 2026</span>
+          </div>
+          <div class="ed-dots"><span></span><span></span><span></span></div>
+        </div>
+      </article>
+    </div>
+
+    <h4 class="sub-section-title">Article · vertical com eyebrow</h4>
     <div class="cards-grid">
-      <article class="card">
-        <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
-        <span class="tag">Editorial</span>
+      <article class="card card--dotted">
+        <span class="card-eyebrow"><span class="dot"></span>Editorial</span>
+        <div class="card-icon-block">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4c-3 9-7 13-13 13l-1 4 4-1c10 0 14-4 14-13"/><path d="M6 17l8-8"/></svg>
+        </div>
         <h3 class="card-title">Manuscritos do Atelier</h3>
         <p class="card-body">Coleção curada de ensaios visuais e tipográficos, organizados por temperatura cromática e voz de marca.</p>
-        <a href="#" class="card-link">Ler edição</a>
+        <div class="card-footer">
+          <span>Edição 04</span>
+          <a href="#" class="card-link" onclick="event.preventDefault()">
+            Ler edição
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
       </article>
 
       <article class="card">
-        <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-        <span class="tag">Processo</span>
+        <span class="card-eyebrow"><span class="dot"></span>Processo</span>
+        <div class="card-icon-block">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4 4 0 0 0 5.7 0L19 11a4 4 0 1 0-5.7-5.7L12 6.5"/><path d="M14 10a4 4 0 0 0-5.7 0L5 13a4 4 0 1 0 5.7 5.7L12 17.5"/></svg>
+        </div>
         <h3 class="card-title">Decisões antes de tokens</h3>
         <p class="card-body">Toda peça começa por uma frase-tese. Sem metáfora, design system vira commodity — coerente em detalhes, morto em personalidade.</p>
-        <a href="#" class="card-link">Ver método</a>
+        <div class="card-footer">
+          <span>Método</span>
+          <a href="#" class="card-link" onclick="event.preventDefault()">
+            Ver método
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
       </article>
 
-      <article class="card">
-        <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.2H22l-6 4.4 2.3 7.2L12 16.4l-6.3 4.4L8 13.6 2 9.2h7.6z"/></svg>
-        <span class="tag">Princípio</span>
+      <article class="card card--dotted">
+        <span class="card-eyebrow"><span class="dot"></span>Princípio</span>
+        <div class="card-icon-block">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4 3 9l9 5 9-5z"/><path d="M3 14l9 5 9-5"/></svg>
+        </div>
         <h3 class="card-title">Constraint over freedom</h3>
         <p class="card-body">Um bom sistema remove decisões. Cada token elimina escolha arbitrária — é o que separa coerência de improviso.</p>
-        <a href="#" class="card-link">Ler princípios</a>
+        <div class="card-footer">
+          <span>Manifesto</span>
+          <a href="#" class="card-link" onclick="event.preventDefault()">
+            Ler princípios
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </article>
+    </div>
+
+    <h4 class="sub-section-title">Issue cover · com placeholder</h4>
+    <div class="cards-grid">
+      <article class="card-cover">
+        <div class="cover">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10c0-3 1.5-5 4.5-5"/><path d="M14 10c0-3 1.5-5 4.5-5"/><circle cx="7.5" cy="13" r="2.5" fill="currentColor" stroke="none"/><circle cx="14.5" cy="13" r="2.5" fill="currentColor" stroke="none"/></svg>
+        </div>
+        <div class="body">
+          <span class="card-eyebrow"><span class="dot"></span>Capa · 05</span>
+          <h3 class="card-title">Tipografia como decisão de marca</h3>
+          <p class="card-body">Por que ITC Garamond — e não Inter — define o caráter editorial.</p>
+          <div class="card-footer">
+            <span>Edição 05</span>
+            <a href="#" class="card-link" onclick="event.preventDefault()">
+              Abrir
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card-cover">
+        <div class="cover">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4a8 8 0 1 0 0 16c1.5 0 2-1 2-2 0-2 2-2 3-2h2a3 3 0 0 0 0-6 8 8 0 0 0-7-6z"/><circle cx="8" cy="11" r="1.2" fill="currentColor" stroke="none"/><circle cx="9" cy="7.5" r="1.2" fill="currentColor" stroke="none"/><circle cx="14" cy="7.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+        </div>
+        <div class="body">
+          <span class="card-eyebrow"><span class="dot"></span>Capa · 06</span>
+          <h3 class="card-title">Pastéis quentes em sistemas digitais</h3>
+          <p class="card-body">Estudo de paletas terracotta + paper, leitura suave em ambos os modos.</p>
+          <div class="card-footer">
+            <span>Edição 06</span>
+            <a href="#" class="card-link" onclick="event.preventDefault()">
+              Abrir
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card-cover">
+        <div class="cover">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7"/><rect x="13" y="4" width="7" height="7"/><rect x="4" y="13" width="7" height="7"/><rect x="13" y="13" width="7" height="7"/></svg>
+        </div>
+        <div class="body">
+          <span class="card-eyebrow"><span class="dot"></span>Capa · 07</span>
+          <h3 class="card-title">Constraint-driven UI</h3>
+          <p class="card-body">Tokens como contrato editorial entre design e engenharia.</p>
+          <div class="card-footer">
+            <span>Edição 07</span>
+            <a href="#" class="card-link" onclick="event.preventDefault()">
+              Abrir
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+            </a>
+          </div>
+        </div>
       </article>
     </div>
   </section>
 
-  <!-- ============== 09 · COMPLIANCE ============== -->
+  <!-- ============== 09 · INPUTS ============== -->
   <section>
     <div class="section-head">
       <div>
-        <span class="section-num">09 · Compliance</span>
+        <span class="section-num">09 · Inputs</span>
+        <h2 class="section-title">Pílulas suaves</h2>
+      </div>
+      <p class="section-meta">Radius 16px · hover border 300 · focus border 500 + ring chroma 18%</p>
+    </div>
+
+    <div class="inputs-grid">
+      <div class="input-group">
+        <label class="input-label">Padrão</label>
+        <input class="input" type="text" value="Walter Benjamin">
+      </div>
+      <div class="input-group">
+        <label class="input-label">Placeholder</label>
+        <input class="input" type="email" placeholder="seu.email@atelier.editorial">
+      </div>
+      <div class="input-group" style="grid-column:1 / -1">
+        <label class="input-label">Search · with kbd hint</label>
+        <div class="input-search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.3-4.3"/></svg>
+          <input class="input" type="search" placeholder="Procurar edição, autor, assunto…">
+          <span class="kbd-trail">⌘ K</span>
+        </div>
+      </div>
+      <div class="input-group">
+        <label class="input-label">Disabled</label>
+        <input class="input" type="text" disabled value="Não editável">
+      </div>
+      <div class="input-group">
+        <label class="input-label">Numérico</label>
+        <input class="input" type="number" value="42">
+      </div>
+      <div class="input-group" style="grid-column:1 / -1">
+        <label class="input-label">Textarea</label>
+        <textarea class="input textarea" rows="4" placeholder="Escreva o resumo da edição…"></textarea>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 10 · MENU & ACTION BAR ============== -->
+  <section>
+    <div class="section-head">
+      <div>
+        <span class="section-num">10 · Menu &amp; Action Bar</span>
+        <h2 class="section-title">Comandos com hierarquia</h2>
+      </div>
+      <p class="section-meta">Popover · ícones outlined editoriais · keyboard hints · estado ativo flutuante</p>
+    </div>
+
+    <div class="menu-stage bg-dotted">
+      <div class="menu-mock">
+        <div class="menu" role="menu" aria-label="Comandos">
+          <div class="menu-section">Documento</div>
+          <button class="menu-item" role="menuitem">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.5 11l7-4"/><path d="M8.5 13l7 4"/></svg>
+            <span>Compartilhar arquivo</span>
+            <span class="menu-kbd"><kbd>⌘</kbd><kbd>F</kbd></span>
+          </button>
+          <button class="menu-item" role="menuitem">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4 4 0 0 0 5.7 0L19 11a4 4 0 1 0-5.7-5.7L12 6.5"/><path d="M14 10a4 4 0 0 0-5.7 0L5 13a4 4 0 1 0 5.7 5.7L12 17.5"/></svg>
+            <span>Abrir link</span>
+            <span class="menu-kbd"><kbd>⌘</kbd><kbd>L</kbd></span>
+          </button>
+          <button class="menu-item menu-item--active" role="menuitem" aria-current="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4c-2 0-3 1-3 3v2c0 2-1 3-2 3 1 0 2 1 2 3v2c0 2 1 3 3 3"/><path d="M15 4c2 0 3 1 3 3v2c0 2 1 3 2 3-1 0-2 1-2 3v2c0 2-1 3-3 3"/></svg>
+            <span>Embed tool</span>
+            <span class="menu-kbd"><kbd>⌘</kbd><kbd>E</kbd></span>
+          </button>
+          <div class="menu-sep" role="separator"></div>
+          <div class="menu-section">Sessão</div>
+          <button class="menu-item" role="menuitem">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M4 10h16"/><path d="M9 3v4"/><path d="M15 3v4"/><circle cx="12" cy="15" r="1.4" fill="currentColor" stroke="none"/></svg>
+            <span>Adicionar agenda</span>
+            <span class="menu-kbd"><kbd>⌘</kbd><kbd>A</kbd></span>
+          </button>
+          <button class="menu-item" role="menuitem">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="m22 8-6 4 6 4z"/></svg>
+            <span>Compartilhar tela</span>
+            <span class="menu-kbd"><kbd>⌘</kbd><kbd>W</kbd></span>
+          </button>
+        </div>
+
+        <div class="action-bar" role="toolbar" aria-label="Ações">
+          <button class="btn btn-icon-only" aria-label="Câmera">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="m22 8-6 4 6 4z"/></svg>
+          </button>
+          <button class="btn btn-icon-only" aria-label="Mic">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0"/><path d="M12 18v3"/></svg>
+          </button>
+          <button class="btn btn-icon-only is-active" aria-label="Apps" aria-pressed="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7"/><rect x="13" y="4" width="7" height="7"/><rect x="4" y="13" width="7" height="7"/><rect x="13" y="13" width="7" height="7"/></svg>
+          </button>
+          <button class="btn btn-icon-only" aria-label="Gravar">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M8.5 12.2 11 14.7 15.5 9.5"/></svg>
+          </button>
+          <span class="sep"></span>
+          <button class="btn btn-icon-only" aria-label="Sair">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6"/><path d="M20 4l-9 9"/><path d="M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 11 · LISTS & TABS ============== -->
+  <section>
+    <div class="section-head">
+      <div>
+        <span class="section-num">11 · Lists &amp; Tabs</span>
+        <h2 class="section-title">Linhas com hierarquia editorial</h2>
+      </div>
+      <p class="section-meta">Sections em mono · counters tabular · selected pill com shadow sutil</p>
+    </div>
+
+    <div class="lists-grid">
+      <div class="list" aria-label="Diretório">
+        <div class="list-section">Edições</div>
+        <div class="list-row is-selected">
+          <span class="checkbox is-checked">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17 19 7"/></svg>
+          </span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2H3z"/><path d="M3 9h18l-2 9a2 2 0 0 1-2 1.5H5a2 2 0 0 1-2-1.5z"/></svg>
+          <span class="name">Manuscritos do Atelier</span>
+          <span class="meta">12 itens</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+        </div>
+        <div class="list-row">
+          <span class="checkbox"></span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+          <span class="name">Decisões antes de tokens</span>
+          <span class="meta">04 itens</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+        </div>
+        <div class="list-row">
+          <span class="checkbox is-checked">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17 19 7"/></svg>
+          </span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/><path d="M10 13h7"/><path d="M10 17h5"/></svg>
+          <span class="name">Constraint over freedom</span>
+          <span class="meta">2.3 KB</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+        </div>
+
+        <div class="list-section">Rascunhos</div>
+        <div class="list-row">
+          <span class="checkbox"></span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4l11-11-4-4L4 16z"/><path d="M14 5l4 4"/></svg>
+          <span class="name">Tipografia como decisão de marca</span>
+          <span class="meta">há 2h</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+        </div>
+        <div class="list-row">
+          <span class="checkbox"></span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4l11-11-4-4L4 16z"/><path d="M14 5l4 4"/></svg>
+          <span class="name">Pastéis quentes em sistemas digitais</span>
+          <span class="meta">ontem</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+        </div>
+      </div>
+
+      <div class="lists-side">
+        <div class="lists-side-block">
+          <h4 class="sub-section-title" style="margin:0 0 12px">Tabs</h4>
+          <div class="tabs" role="tablist">
+            <button class="tab is-active" role="tab">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7"/><rect x="13" y="4" width="7" height="7"/><rect x="4" y="13" width="7" height="7"/><rect x="13" y="13" width="7" height="7"/></svg>
+              Todas
+            </button>
+            <button class="tab" role="tab">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6l5 5v11H9z"/><path d="M15 3v5h5"/><path d="M5 7v14h11"/></svg>
+              Edições
+            </button>
+            <button class="tab" role="tab">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4a8 8 0 1 0 0 16c1.5 0 2-1 2-2 0-2 2-2 3-2h2a3 3 0 0 0 0-6 8 8 0 0 0-7-6z"/><circle cx="8" cy="11" r="1.2" fill="currentColor" stroke="none"/><circle cx="9" cy="7.5" r="1.2" fill="currentColor" stroke="none"/><circle cx="14" cy="7.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+              Tokens
+            </button>
+            <button class="tab" role="tab">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="3.5"/><path d="M3 21c1-4 3.5-6 6-6s5 2 6 6"/><circle cx="17" cy="11" r="2.5"/><path d="M16 21c0-3 2-5 4-5"/></svg>
+              Time
+            </button>
+          </div>
+        </div>
+
+        <div class="lists-side-block">
+          <h4 class="sub-section-title" style="margin:0 0 12px">Avatares</h4>
+          <div class="avatar-group">
+            <span class="avatar">SG</span>
+            <span class="avatar">MR</span>
+            <span class="avatar">JK</span>
+            <span class="avatar">+4</span>
+          </div>
+        </div>
+
+        <div class="lists-side-block">
+          <h4 class="sub-section-title" style="margin:0 0 12px">Progress</h4>
+          <div class="progress"><span style="width:36%"></span></div>
+          <div class="progress-meta"><span>5,46 GB usados</span><span>15 GB</span></div>
+          <div style="height:16px"></div>
+          <div class="progress progress--sage"><span style="width:72%"></span></div>
+          <div class="progress-meta"><span>Edição 04 · revisão</span><span>72%</span></div>
+        </div>
+
+        <div class="lists-side-block">
+          <h4 class="sub-section-title" style="margin:0 0 12px">Pills &amp; counters</h4>
+          <div style="display:flex; flex-wrap:wrap; gap:8px; align-items:center;">
+            <span class="pill-positive"><span class="dot"></span> Publicado</span>
+            <span class="tag">Editorial</span>
+            <span class="counter">42</span>
+            <span class="counter">128</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 12 · FEEDBACK ============== -->
+  <section>
+    <div class="section-head">
+      <div>
+        <span class="section-num">12 · Feedback</span>
+        <h2 class="section-title">Sinais discretos</h2>
+      </div>
+      <p class="section-meta">Tooltip ink · toasts surface-card · empty com pattern dotted</p>
+    </div>
+
+    <div class="feedback-grid">
+      <div class="feedback-cell">
+        <h4 class="sub-section-title" style="margin:0 0 16px">Tooltip</h4>
+        <div style="display:flex; gap:24px; align-items:flex-end;">
+          <span class="tooltip">Salvar como rascunho · ⌘ S</span>
+          <span class="tooltip">Última edição há 2 minutos</span>
+        </div>
+      </div>
+
+      <div class="feedback-cell">
+        <h4 class="sub-section-title" style="margin:0 0 16px">Toasts</h4>
+        <div style="display:grid; gap:12px;">
+          <div class="toast">
+            <span class="icon-wrap">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17 19 7"/></svg>
+            </span>
+            <div>
+              <div class="toast-title">Edição publicada</div>
+              <div class="toast-body">Manuscritos do Atelier · 04</div>
+            </div>
+            <button class="btn btn-ghost btn-icon-only btn-sm" aria-label="Fechar">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12"/><path d="M18 6L6 18"/></svg>
+            </button>
+          </div>
+          <div class="toast toast--warn">
+            <span class="icon-wrap">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4 2 20h20z"/><path d="M12 11v4"/><circle cx="12" cy="17.5" r="1.1" fill="currentColor" stroke="none"/></svg>
+            </span>
+            <div>
+              <div class="toast-title">Conexão instável</div>
+              <div class="toast-body">Suas edições estão sendo salvas localmente.</div>
+            </div>
+            <button class="btn btn-ghost btn-icon-only btn-sm" aria-label="Fechar">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12"/><path d="M18 6L6 18"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="feedback-cell" style="grid-column:1 / -1">
+        <h4 class="sub-section-title" style="margin:0 0 16px">Empty state</h4>
+        <div class="empty">
+          <div class="empty-glyph">*</div>
+          <h3 class="empty-title">Nada por aqui ainda</h3>
+          <p class="empty-body">Comece criando sua primeira edição. Ela aparecerá nesta lista assim que for salva como rascunho.</p>
+          <button class="btn btn-primary" type="button">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+            Criar edição
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== 13 · COMPLIANCE ============== -->
+  <section>
+    <div class="section-head">
+      <div>
+        <span class="section-num">13 · Compliance</span>
         <h2 class="section-title">Guardrails aplicados</h2>
       </div>
       <p class="section-meta">Decisões upstream auditáveis</p>
@@ -323,14 +799,14 @@
 
     <div class="compliance">
       <ul>
-        <li><strong>Fontes:</strong> ITC Garamond Cond (Book 400) em display/H1/H2 · Garamond Narrow (Bold) em H3/cards · Instrument Sans em body/UI · JetBrains Mono em specs. Separação serif-titles / sans-body deliberada.</li>
-        <li><strong>Shadow:</strong> philosophy <em>zero</em>. Profundidade vem de alternância entre 4 surfaces. Sem rgba(0,0,0,X) em lugar nenhum.</li>
-        <li><strong>Hover signature:</strong> texto migra pra terracotta — uma única interação consistente. Sem scale, sem opacity, sem translate em hover.</li>
-        <li><strong>Press scale:</strong> 0.98 só em <code>:active</code>, nunca em hover.</li>
-        <li><strong>Status colors:</strong> success em sage (#6F7A5C / #DDE0CC) — par próprio que harmoniza com terracotta. Warning/error/info derivados do accent com chroma reduzido.</li>
-        <li><strong>Dark mode:</strong> primary chroma 0.22 → 0.15 (×0.68), todos neutrals re-tintados no hue 50.7. Não é light invertido.</li>
-        <li><strong>Idiosyncratic rule:</strong> drop cap em Garamond Book Condensed terracotta + micro labels uppercase tracking +0.16em.</li>
-        <li><strong>Tokens:</strong> 3-tier (raw → semantic → component) com override dark só no Tier 2.</li>
+        <li><strong>Iconografia:</strong> set proprietário 1.5px, viewBox 24×24, render base 18px. Cantos levemente arredondados. 1 detalhe filled como assinatura editorial.</li>
+        <li><strong>Botões:</strong> sempre ícone leading · radius full · variantes primary/secondary/outline/ghost · FAB radius 2xl com shadow-pill.</li>
+        <li><strong>Cards:</strong> eyebrow mono uppercase · ícone-bloco com surface-alt · título italic Garamond Narrow · footer dividido por border-subtle. Variantes: editorial horizontal, article vertical, issue cover.</li>
+        <li><strong>Inputs:</strong> radius xl (16px) — pílula suave, não cilíndrica · focus pastel terracotta + ring 18% chroma.</li>
+        <li><strong>Sombras:</strong> apenas em flutuantes (selected pill, popover, action bar, FAB, toast) — usando ink hue, não rgba black.</li>
+        <li><strong>Pattern dotted:</strong> radial-gradient 1px / 22px em muted-soft. Aplicado pontualmente em alguns cards e empty state.</li>
+        <li><strong>Cores:</strong> primary 300/500 mantidos · 700/800/900 dessaturados em chroma 0.13/0.10/0.07.</li>
+        <li><strong>Tipografia:</strong> H1 Garamond Cond · H2/H3 Garamond Narrow regular (não bold) · body Instrument Sans · mono JetBrains.</li>
       </ul>
     </div>
   </section>
@@ -338,19 +814,22 @@
 </main>
 
 <script>
-  const root = document.documentElement;
-  const initial = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-  root.setAttribute("data-theme", localStorage.getItem("ds-theme") || initial);
+(function(){
+  var root = document.documentElement;
+  var pref = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  try { root.setAttribute("data-theme", localStorage.getItem("ds-theme") || pref); } catch(_){}
+})();
 
-  document.getElementById("themeToggle").addEventListener("click", () => {
-    const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
-    const apply = () => {
-      root.setAttribute("data-theme", next);
-      localStorage.setItem("ds-theme", next);
-    };
-    if (document.startViewTransition) document.startViewTransition(apply);
-    else apply();
-  });
+document.getElementById("themeToggle").addEventListener("click", function() {
+  var root = document.documentElement;
+  var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+  var apply = function() {
+    root.setAttribute("data-theme", next);
+    try { localStorage.setItem("ds-theme", next); } catch(_){}
+  };
+  if (document.startViewTransition) document.startViewTransition(apply);
+  else apply();
+});
 </script>
 
 </body>

@@ -1,7 +1,8 @@
 /* ============================================================
    TYPOGRAPHY · 2 voices + mono
-   - Garamond Cond   → display, H1, H2 (títulos grandes)
-   - Garamond Narrow → H3, card titles (títulos menores)
+   - Garamond Cond   → APENAS Display, H1, H2 (títulos grandes, roman)
+   - Garamond Narrow → H3 e abaixo + TODO italic do system serif
+     (Cond Italic é compactada demais; Narrow é a voz itálica oficial)
    - Instrument Sans → body, UI
    - JetBrains Mono  → code, specs, dados numéricos
    ============================================================ */
@@ -108,23 +109,36 @@
   color: var(--text-primary);
 }
 
-/* H2 — 33px / Garamond Book Narrow */
+/* H2 — 42px / Garamond Book Cond · roman
+   (escala aumentada vs. 33px pra criar contraste real com H3) */
 .t-h2 {
-  font-family: var(--font-subhead);
+  font-family: var(--font-heading);
   font-weight: 400;
-  font-size: var(--raw-text-33);
-  line-height: 1.15;
-  letter-spacing: -0.015em;
+  font-size: 2.625rem;
+  line-height: 1.1;
+  letter-spacing: -0.018em;
   color: var(--text-primary);
 }
 
-/* H3 — 26px / Garamond Book Narrow (não-bold, mais elegante) */
+/* H3 — 26px / Garamond Bold Narrow
+   (mudança de família + peso = corte limpo da voz display pra subhead) */
 .t-h3 {
   font-family: var(--font-subhead);
-  font-weight: 400;
+  font-weight: 700;
   font-size: var(--raw-text-26);
   line-height: 1.2;
   letter-spacing: -0.005em;
+  color: var(--text-primary);
+}
+
+/* H4 — 21px / Garamond Bold Narrow
+   (nível adicional pra hierarquia mais clara dentro de cards e seções) */
+.t-h4 {
+  font-family: var(--font-subhead);
+  font-weight: 700;
+  font-size: var(--raw-text-21);
+  line-height: 1.25;
+  letter-spacing: -0.003em;
   color: var(--text-primary);
 }
 
@@ -166,16 +180,23 @@
 }
 
 /* ============================================================
-   IDIOSYNCRATIC RULE · Drop cap terracotta
+   ITALIC POLICY · Garamond Narrow é a única voz itálica do serif
+   Garamond Cond Italic é compactada demais — não usar.
+   Aplica em qualquer <em> dentro de display/heading/subhead.
    ============================================================ */
-.drop-cap::first-letter {
-  font-family: var(--font-display);
-  font-weight: 400;
-  font-style: normal;
-  float: left;
-  font-size: 5.4em;
-  line-height: 0.85;
-  margin: 0.04em 0.08em -0.05em 0;
-  color: var(--color-primary-500);
-  letter-spacing: -0.02em;
+.t-display em, .t-display i,
+.t-h1 em, .t-h1 i,
+.t-h2 em, .t-h2 i,
+.t-h3 em, .t-h3 i,
+.t-h4 em, .t-h4 i {
+  font-family: var(--font-subhead);
+  font-style: italic;
+  font-weight: inherit;
 }
+
+/* ============================================================
+   DROP CAP · removido do system
+   Classe mantida como no-op pra não quebrar imports legados.
+   Para ênfase em prosa, use <em> (vira Narrow italic) ou .t-h2.
+   ============================================================ */
+.drop-cap::first-letter { all: unset; }

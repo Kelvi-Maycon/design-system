@@ -96,7 +96,7 @@
   --h-display-lh:    0.95;
   --h-display-trk:   -0.025em;
   --h1-size: var(--text-52); --h1-lh: 1;    --h1-trk: -0.02em;
-  --h2-size: var(--text-33); --h2-lh: 1.15; --h2-trk: -0.015em;
+  --h2-size: 2.625rem;        --h2-lh: 1.1;  --h2-trk: -0.018em;
   --h3-size: var(--text-26); --h3-lh: 1.2;  --h3-trk: -0.005em;
   --body-size: var(--text-17); --body-lh: 1.55;
   --small-size: var(--text-14); --small-lh: 1.5;
@@ -124,6 +124,15 @@ h3, .h3 {
   font-size: var(--h3-size); line-height: var(--h3-lh);
   letter-spacing: var(--h3-trk); color: var(--text-primary);
 }
+/* Italic policy: todo italic em headings serif vira Narrow */
+h1 em, h1 i, .h1 em, .h1 i,
+h2 em, h2 i, .h2 em, .h2 i,
+h3 em, h3 i, .h3 em, .h3 i,
+.h-display em, .h-display i, h1.t-display em, h1.t-display i {
+  font-family: var(--font-subhead);
+  font-style: italic;
+  font-weight: inherit;
+}
 p, .p {
   font-family: var(--font-body); font-weight: 400;
   font-size: var(--body-size); line-height: var(--body-lh);
@@ -145,13 +154,9 @@ code, kbd, samp, .code {
   color: var(--text-primary);
 }
 
-/* Drop cap idiosyncratic rule */
-.drop-cap::first-letter {
-  font-family: var(--font-display); font-weight: 400; font-style: normal;
-  float: left; font-size: 5.4em; line-height: 0.85;
-  margin: 0.04em 0.08em -0.05em 0;
-  color: var(--color-primary-500); letter-spacing: -0.02em;
-}
+/* Drop cap removido do system. Classe mantida como no-op
+   pra não quebrar imports legados. */
+.drop-cap::first-letter { all: unset; }
 
 /* Dark override */
 [data-theme="dark"] {
